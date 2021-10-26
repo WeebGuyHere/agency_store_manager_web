@@ -1,0 +1,227 @@
+@charset "UTF-8";
+body {
+  width: auto;
+  height: auto;
+  background: linear-gradient(225deg, rgb(189, 238, 11), rgb(0, 255, 221));
+  font-family: sans-serif;
+}
+
+body .custom {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 60px;
+  margin-left: 60px;
+  height:1000px;
+}
+
+.second-header {
+    opacity: 1;
+    background-color: #4d5bf9;
+    border: 0px solid #f7f2f2;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px px 0px #00000008;
+            box-shadow: 0px 3px px 0px #00000008;
+     position: fixed;
+     top:1px;
+     
+     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  .second-header nav {
+    
+    top:94px;
+    width: auto;
+  
+  }
+  
+  .second-header nav .primary-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    
+  }
+  
+  .second-header nav .primary-nav li {
+    display: inline-block;
+  }
+  
+  .second-header nav .primary-nav li {
+    position: relative;
+  }
+  
+  .second-header nav .primary-nav a {
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    width: 170px;
+    padding: 10px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    
+  }
+  
+  .second-header nav .primary-nav button {
+    background: rgb(20, 20, 20);
+    margin: 0px 300px 0px 150px;
+    position: relative;
+    left:300px;
+    
+  }
+  .second-header nav .primary-nav li.login{
+    display: block;
+    
+    
+   
+    
+    
+  }
+  .second-header nav .primary-nav a:hover {
+    background-color: #e91159;
+    -webkit-transition: 0.4;
+    transition: 0.4;
+    
+    
+  }
+  
+  /*hide menu dropdown*/
+  .menu-dropdown {
+    position: absolute;
+    background-color: #4d5bf9;
+    display: none;
+    
+  }
+  body .pic{
+    position: relative;
+    right: 10px;
+    bottom: 10px;
+  }
+  /*show menu*/
+  .primary-nav li:hover > .menu-dropdown {
+    display: block;}
+
+    .menu-dropdown1 {
+        position: relative;
+        background-color: #4d5bf9;
+        display: none;
+        margin-top: 10px;
+        margin-left: 170px;
+        width: 300px;
+        
+      }
+      
+      /*show menu*/
+      .navigation li:hover > .menu-dropdown1 {
+        display: block;
+        position: relative;
+        left:20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        
+
+  
+      }
+  .navigation {
+      position: fixed;
+      top: 120px;
+      left:5px;
+      bottom:20px;
+      width:300px;
+      border-radius: 10px;
+      box-sizing: initial;
+      border-left: 5px solid #4d5bf9;
+      background:#4d5bf9;
+      transition: width 0.5s;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      overflow-x: hidden;
+  }
+  .navigation ul {
+      position: absolute;
+      top:0px;
+      left:0px;
+      width:100%;
+      padding-left: 5px;
+      padding-top: 40px;
+  }
+  .navigation ul li 
+  {
+      position: relative;
+      list-style: none;
+      width: 100%; 
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+  }
+  .navigation ul li.active 
+  {
+    background: rgb(255, 255, 255);
+    
+    
+  }
+  .navigation ul li a 
+  {
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    width: 170px;
+    padding: 20px;
+    display: flex;
+    color: #fff;
+    
+    
+  }
+  .navigation ul li a .iconn
+  {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 10px;
+    line-height:30px;
+    
+  }
+  .navigation ul li.active a
+  {
+    color: #080808
+  } 
+  .navigation ul li a:hover {
+    background-color: #e91159;
+    -webkit-transition: 0.4;
+    transition: 0.4;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+  }
+  .toggle
+  {
+    position: fixed;
+    top:70px;
+    left: 7px;
+    width: 50px;
+    height: 50px;
+    background: #4d5bf9;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle.active {
+    background: #e70f94;
+  }
+  .toggle ion-icon
+  {
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;
+  }
+  .toggle ion-icon.open ,
+  .toggle.active ion-icon.close
+  {
+display: block;
+  }
+  .toggle ion-icon.close,
+  .toggle.active ion-icon.open
+  {
+    display: none;
+  }
+  

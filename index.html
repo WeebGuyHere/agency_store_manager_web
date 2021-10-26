@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <img class="pic" src="/pic/picb.jpg">
+    <main class="custom">
+    <section class="second-header"> 
+        <nav>
+                <ul class="primary-nav">
+                    
+                    <li><a href="#"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+                    <li><a href="#">Tổ chức</a>
+                      <ul class ="menu-dropdown">
+                        <li><a href="#">Quản lý các đại lý</a></li>
+                        <li><a href="#">Quản lý mặt hàng</a></li>
+                        <li><a href="#">Xuất phiếu</a></li>
+                      </ul></li>
+                    
+                    <li><a href="#">Báo cáo</a>
+                    <ul class ="menu-dropdown">
+                      <li><a href="#">Doanh số</a></li>
+                    <li><a href="#">Công nợ tháng</a></li>
+                    </li></ul>
+                    <li><a href="#">Khách hàng</a>
+                      <ul class ="menu-dropdown">
+                    <li><a href="#">Phản hồi</a></li>
+                    <li><a href="#">Yêu cầu Khác hàng</a></li></li></ul>
+                    <li><a href="#">Contact</a>
+                    <ul class="menu-dropdown">
+                      <li><a href="#">Hotline: 0948232811</a></li>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Instagram</a></li>
+                    </ul></li>
+                    <button>
+                    <li class ="login"><a href="login.html">Đăng nhập</a></li>
+                    </button>
+                </ul>         
+        </nav>   
+    </section>
+    </main>
+    <hr style="border: 0">
+
+    <div class ="navigation"> 
+      <ul> 
+            <li class ="list active"><a href="#"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+            <li class="list"><a href="#"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ chức</a>
+              <ul class ="menu-dropdown1">
+                <li><a href="#">Quản lý các đại lý</a></li>
+                <li><a href="#">Quản lý mặt hàng</a></li>
+                <li><a href="#">Xuất phiếu</a></li>
+              </ul ></li>
+            
+            <li class="list"><a href="#"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo cáo</a>
+            <ul class ="menu-dropdown1">
+              <li><a href="#">Doanh số</a></li>
+            <li><a href="#">Công nợ tháng</a></li>
+            </li></ul>
+            <li class="list"><a href="#"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách hàng</a>
+              <ul class ="menu-dropdown1">
+            <li><a href="#">Phản hồi</a></li>
+            <li><a href="#">Yêu cầu Khác hàng</a></li></li></ul>
+            <li class="list"><a href="#"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
+            <ul class="menu-dropdown1">
+              <li><a href="#">Hotline: 0948232811</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul></li>
+            
+            
+        
+
+          </ul>
+      </div>
+      <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-circle-outline" class="close"></ion-icon>
+      </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script> 
+    let list = document.querySelectorAll('.list');
+    for(let i=0;i<list.length;i++){
+      list[i].onclick = function(){
+         let j = 0;
+        while(j = list.length){
+          list[j++].className = 'list';
+        }
+      list[i].className = 'list active';
+      }    }
+    </script>
+    <script>
+      let menuToggle = document.querySelector('.toggle');
+      menuToggle.onclick = function(){
+        menuToggle.classlist.toggle('active')
+
+      }
+    </script>
+</body>
+
+</html>
