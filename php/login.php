@@ -2,11 +2,14 @@
   session_start();
   require_once("../lib/connection.php");
   require_once("../lib/password.php"); //yes, bcrypt hashing password
-  $username = isset($_POST['username']);
-  $password = isset($_POST['password']);
+  
 
   if (isset($_POST["submit"])) {
-    
+    if (isset($_POST['username']) && ($_POST['password']))
+    {
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+    }
     if ($username == "" || $password == "") { //return login page if username or password empty
         ?>
                 <script>
@@ -18,27 +21,27 @@
     } 
     else 
     {
-    $sql = "select * from login where username = '$username'";
-	  $query = mysqli_query($conn,$sql);
-    $passhash = mysqli_fetch_object($query);
-    
-    //verify user 
-    if (password_verify($password, $passhash->password)) 
-    {
-        $_SESSION['username'] = $username;
-        header("location: ./captcha.php");             
-        } 
-        else
-        {               
-            ?>
-            <script>
-            if (!alert('User or Password NOT Found!')) 
-            { //return login page if username of password not found in database
-            document.location = "./login.php";
-            }
-            </script>
-            <?php      
-        }
+      $sql = "select * from login where username = '$username'";
+      $query = mysqli_query($conn,$sql);
+      $passhash = mysqli_fetch_object($query);
+      
+      //verify user 
+      if (password_verify($password, $passhash->password)) 
+      {
+          $_SESSION['username'] = $username;
+          header("location: ./captcha.php");             
+      } 
+      else
+      {               
+              ?>
+              <script>
+              if (!alert('User or Password NOT Found!')) 
+              { //return login page if username of password not found in database
+              document.location = "./login.php";
+              }
+              </script>
+              <?php      
+      }
     }
 }
 ?>
