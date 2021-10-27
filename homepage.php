@@ -84,7 +84,7 @@
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ Chức</a>
           <ul class ="menu-dropdown1">
-            <li><a href="./php/ThemdaiLy.html">Quản lý các đại lý</a></li>
+            <li><a href="./php/ThemdaiLy.php">Quản lý các đại lý</a></li>
             <li><a href="./php/ThemMatHang.html">Quản lý mặt hàng</a></li>
             <li><a href="./php/XuatPhieu.html">Xuất phiếu</a></li>
           </ul></li>
