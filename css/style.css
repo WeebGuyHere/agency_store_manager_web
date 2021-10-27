@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
-  width: 100%; 
-height: 1000px;
+  width: auto; 
+height: auto;
   background: #2e3cd1;
   font-family: sans-serif;
 }
@@ -20,7 +20,7 @@ body .pic{
   
 }
 body .pic2{
-  width:100%
+  width:100%;
 }
 body .pic3{
   width:100%;
@@ -354,4 +354,68 @@ body .pic{
 
   background-size:auto;
   
+}
+#footer{
+  position: relative;
+  width:auto;
+  background: #080808;
+  margin-right: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.list-inline{
+  list-style-type: none;
+}
+.list-inline a{
+  list-style-type: none;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+.ThemTV{
+
+ position: relative;
+ top: 170px;
+ left: 100px;
+}
+body table{
+  position: relative;
+ top: 170px;
+ left: 100px;
+}
+body table tr{
+  text-align: left;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+
+}
+.Change{
+display: inline-block;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+ .Change li:hover{
+  background-color: #2013dd;
+    -webkit-transition: 0.4;
+    transition: 0.4;
+   
+}
+.ThemTV button{
+  position: relative;
+  bottom: 10px;
+  background: black;
+  margin: 0px 10px;
+  width: 60px;
+  height: 50px;
+}
+.Change li{
+  list-style-type: none !important;
+  
+}
+.Change li a{
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+
+
 }
