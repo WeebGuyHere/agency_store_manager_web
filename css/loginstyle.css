@@ -144,3 +144,98 @@
   form input[type="submit"]:hover{
     background: #2c52ed;
   }
+  /*slidebar*/
+.slidebar{
+  position: fixed;
+left: -250px;
+  top:150px;
+  width: 250px;
+  height: 100%;
+  background:#045266;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: all .5s ease;
+}
+.slidebar header{
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: #1829eb;
+  user-select: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.slidebar ul a{
+  display: block;
+  height:100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: #fff;
+  padding-left: 1px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255,255,.1);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition: .4s;
+  text-decoration: none;
+}
+.slidebar ul li{
+   list-style-type: none !important;
+}
+
+ul li:hover a{
+  padding-left: 50px;
+}
+.slidebar ul a span {
+  margin-right: 16px;
+
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  cursor: pointer;
+  background: #1c4152;
+  border-radius: 3px;
+  padding: 6px 12px;
+}
+label #btn{
+  left: 10px;
+  top: 150px;
+font-size: 35px;
+color:rgb(255, 253, 253);
+padding: 4px 8px;
+transition: all .5s;
+position: fixed;
+}
+label #cancel{
+  left: -250px;
+  top: 150px;
+  font-size: 30px;
+  color:rgb(255, 255, 255);
+  z-index: 1111;
+  padding: 4px 9px;
+  border-radius: 20px 20px 20px 20px;
+  transition: all .4s ease;
+  position: fixed;
+}
+#check:checked ~ .slidebar{
+  left:0;
+}
+#check:checked ~ label #btn{
+  left:150px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left:210px;
+}
+body .pic{
+
+  background-size:auto;
+  
+}
