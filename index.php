@@ -34,7 +34,7 @@
         <nav>
                 <ul class="primary-nav">
                     
-                    <li><a href="./index.html"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+                    <li><a href="./index.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
                     <li><a href="#">Tổ chức</a>
                       <ul class ="menu-dropdown">
                         <li><a href="./php/ThemdaiLy.html">Quản lý các đại lý</a></li>
