@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2021 at 10:15 AM
+-- Generation Time: Oct 27, 2021 at 06:02 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.23
 
@@ -44,6 +44,12 @@ CREATE TABLE IF NOT EXISTS `cacdaily` (
   KEY `MaDaiLy` (`MaDaiLy`),
   KEY `Loai` (`Loai`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `cacdaily`:
+--   `Loai`
+--       `loaidaily` -> `Loai`
+--
 
 --
 -- Dumping data for table `cacdaily`
@@ -103,6 +109,12 @@ CREATE TABLE IF NOT EXISTS `chitietxuathang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- RELATIONSHIPS FOR TABLE `chitietxuathang`:
+--   `MaMatHang`
+--       `mathang` -> `MaMatHang`
+--
+
+--
 -- Dumping data for table `chitietxuathang`
 --
 
@@ -133,6 +145,12 @@ CREATE TABLE IF NOT EXISTS `congno` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- RELATIONSHIPS FOR TABLE `congno`:
+--   `MaDaiLy`
+--       `cacdaily` -> `MaDaiLy`
+--
+
+--
 -- Dumping data for table `congno`
 --
 
@@ -161,6 +179,12 @@ CREATE TABLE IF NOT EXISTS `doanhso` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- RELATIONSHIPS FOR TABLE `doanhso`:
+--   `MaDaiLy`
+--       `cacdaily` -> `MaDaiLy`
+--
+
+--
 -- Dumping data for table `doanhso`
 --
 
@@ -187,6 +211,10 @@ CREATE TABLE IF NOT EXISTS `loaidaily` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- RELATIONSHIPS FOR TABLE `loaidaily`:
+--
+
+--
 -- Dumping data for table `loaidaily`
 --
 
@@ -205,11 +233,22 @@ INSERT INTO `loaidaily` (`Loai`, `TenLoai`, `NoToiDa`) VALUES
 
 DROP TABLE IF EXISTS `login`;
 CREATE TABLE IF NOT EXISTS `login` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(256) NOT NULL,
   `password` varchar(256) NOT NULL,
   PRIMARY KEY (`ID`,`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `login`:
+--
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`ID`, `username`, `password`) VALUES
+(1, 'user01', '$2a$10$jdoU8hiKSlqXBzhkIsWNj.h4uoM.H2QK1QnzwHdPKqu1hzMXAjxle');
 
 -- --------------------------------------------------------
 
@@ -224,6 +263,10 @@ CREATE TABLE IF NOT EXISTS `mathang` (
   `DonGia` varchar(50) NOT NULL,
   PRIMARY KEY (`MaMatHang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `mathang`:
+--
 
 --
 -- Dumping data for table `mathang`
@@ -253,6 +296,12 @@ CREATE TABLE IF NOT EXISTS `phieuthutien` (
   `SoTienThu` decimal(18,0) NOT NULL,
   KEY `MaDaiLy` (`MaDaiLy`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `phieuthutien`:
+--   `MaDaiLy`
+--       `cacdaily` -> `MaDaiLy`
+--
 
 --
 -- Dumping data for table `phieuthutien`
@@ -287,6 +336,14 @@ CREATE TABLE IF NOT EXISTS `phieuxuathang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- RELATIONSHIPS FOR TABLE `phieuxuathang`:
+--   `MaDaiLy`
+--       `cacdaily` -> `MaDaiLy`
+--   `MaPhieuXuat`
+--       `chitietxuathang` -> `MaPhieuXuat`
+--
+
+--
 -- Dumping data for table `phieuxuathang`
 --
 
@@ -309,6 +366,10 @@ CREATE TABLE IF NOT EXISTS `tochucdaily` (
   `SoLoaiDaiLy` varchar(50) NOT NULL,
   `SoDaiLyToiDa` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `tochucdaily`:
+--
 
 --
 -- Dumping data for table `tochucdaily`
