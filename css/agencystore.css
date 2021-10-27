@@ -31,7 +31,7 @@ body li.QL{
   font-size: 40px;
   color:#fff;
   position: relative;
- top:-1200px;
+ top:-1300px;
   left: 300px;
   list-style-type: none !important;
   font-weight: 600;
@@ -42,7 +42,7 @@ body li.QL2{
   font-size: 40px;
   color:#fff;
   position: relative;
-  top:-1200px;
+  top:-1300px;
   left: 300px;
   list-style-type: none !important;
   font-weight: 800;
@@ -53,7 +53,7 @@ body li.QL3{
   font-size: 30px;
   color:#fff;
   position: relative;
-  top:-1100px;
+  top:-1200px;
   left: 300px;
   list-style-type: none !important;
  
@@ -64,16 +64,10 @@ body .button{
   background: yellow;
   width:250px;
   height: 50px;
-  left: 950px;
- bottom: 1050px;
+  left: 1000px;
+ bottom: 1150px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     
-}
-body .button a:hover{
-  background-color: #4e45d4;
-    -webkit-transition: 0.4;
-    transition: 0.4;
-    height: 2px;
 }
 body .button li {
   list-style-type: none !important;
@@ -96,7 +90,6 @@ body .button li a span{
     border-radius: 10px;
     -webkit-box-shadow: 0px 3px px 0px #00000008;
             box-shadow: 0px 3px px 0px #00000008;
-     position: fixed;
      top:1px;
      border-top: 1px solid rgba(255, 255,255,.1);
   border-bottom: 1px solid rgb(255, 255, 255);
@@ -115,7 +108,6 @@ body .button li a span{
     padding: 0;
     list-style: none;
     text-align: center;
-    height: 42px;
     
   }
   
@@ -141,8 +133,7 @@ body .button li a span{
     background: rgb(92, 96, 131);
     margin: 0px 300px 0px 150px;
     position: relative;
-    left:695px;
-    bottom: 45px;
+    left:300px;
     
   }
   .second-header nav .primary-nav li.login{
@@ -386,7 +377,39 @@ body .pic{
  top: 170px;
  left: 100px;
 }
-
+table{
+  position:relative;
+ top: 170px;
+ left: 100px;
+ height:20px;
+ overflow-y:auto;
+}
+table th, td {
+    padding: 10px;
+}
+table tr{
+  border: 1px ;
+  text-align: center;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  
+}
+.button_change {
+  display: inline;
+  width: 115px;
+  height: 25px;
+  background: #4E9CAF;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  line-height: 30px;
+}
 .Change{
 display: inline-block;
 box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
