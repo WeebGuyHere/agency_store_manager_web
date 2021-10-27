@@ -14,11 +14,47 @@ body .custom {
   height:1000px;
 }
 body .pic{
-  width:auto
+  width:auto;
+  position: relative;
+    right: 10px;
+    bottom: 10px;
+}
+body li.QL{
+  text-align: center;
+  font-size: 40px;
+  color:#fff;
+  position: relative;
+  bottom: 650px;
+  left: 40px;
+  list-style-type: none !important;
+  font-weight: 600;
+  font-family:serif;
+}
+body li.QL2{
+  text-align: center;
+  font-size: 40px;
+  color:#fff;
+  position: relative;
+  bottom: 650px;
+  left: 40px;
+  list-style-type: none !important;
+  font-weight: 800;
+  font-family:serif;
+}
+body li.noidung{
+  text-align: center;
+  font-size: 30px;
+  color:#fff;
+  position: relative;
+  bottom: 600px;
+  left: 40px;
+  list-style-type: none !important;
+ 
+  
 }
 .second-header {
     opacity: 1;
-    background-color: #4d5bf9;
+    background-color: #2c3ce7;
     border: 0px solid #f7f2f2;
     border-radius: 10px;
     -webkit-box-shadow: 0px 3px px 0px #00000008;
@@ -64,7 +100,7 @@ body .pic{
   }
   
   .second-header nav .primary-nav button {
-    background: rgb(70, 69, 69);
+    background: rgb(92, 96, 131);
     margin: 0px 300px 0px 150px;
     position: relative;
     left:300px;
@@ -90,30 +126,27 @@ body .pic{
   .menu-dropdown {
     position: absolute;
     background-color: #4d5bf9;
-    display: none;
-    
+    display: none; 
   }
-  body .pic{
-    position: relative;
-    right: 10px;
-    bottom: 10px;
-  }
+  
   /*show menu*/
   .primary-nav li:hover > .menu-dropdown {
-    display: block;}
+    display: block;
+    
+  }
 
     .menu-dropdown1 {
         position: relative;
-        background-color: #4d5bf9;
+        background-color: #045266;
         display: none;
         margin-top: 10px;
         margin-left: 170px;
-        width: 300px;
+        width: 330px;
         
       }
       
       /*show menu*/
-      .navigation li:hover > .menu-dropdown1 {
+      .slidebar li:hover > .menu-dropdown1 {
         display: block;
         position: relative;
         left:20px;
@@ -121,6 +154,9 @@ body .pic{
         
 
   
+      }
+    .menu-dropdown1.show{
+        display: block;
       }
     
   .navigation {
@@ -192,40 +228,7 @@ body .pic{
     border-bottom-left-radius: 30px;
     
   }
-  .toggle
-  {
-    position: fixed;
-    top:70px;
-    left: 7px;
-    width: 50px;
-    height: 50px;
-    background: #4d5bf9;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .toggle.active {
-    background: #e70f94;
-  }
-  .toggle ion-icon
-  {
-    position: absolute;
-    color: #fff;
-    font-size: 34px;
-    display: none;
-  }
-  .toggle ion-icon.open ,
-  .toggle.active ion-icon.close
-  {
-display: block;
-  }
-  .toggle ion-icon.close,
-  .toggle.active ion-icon.open
-  {
-    display: none;
-  }
+
   
 /*slidebar*/
 .slidebar{
