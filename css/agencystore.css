@@ -378,7 +378,39 @@ body .pic{
  top: 170px;
  left: 100px;
 }
-
+table{
+  position:relative;
+ top: 170px;
+ left: 100px;
+ height:20px;
+ overflow-y:auto;
+}
+table th, td {
+    padding: 15px;
+}
+table tr{
+  border: 1px ;
+  text-align: center;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  
+}
+.button_change {
+  display: inline;
+  width: 115px;
+  height: 25px;
+  background: #4E9CAF;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  line-height: 30px;
+}
 .Change{
 display: inline-block;
 box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
