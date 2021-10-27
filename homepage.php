@@ -3,7 +3,7 @@
   if (isset($_SESSION['username']) && ($_SESSION['security_code']) )
   {
     
-  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -117,3 +117,10 @@
 </body>
 
 </html>
+<?php
+  }
+  else 
+  {
+    header("location: ./index.php");
+  }
+?>

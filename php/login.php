@@ -1,6 +1,7 @@
 <?php
   session_start();
   require_once("../lib/connection.php");
+  require_once("../lib/password.php"); //yes, bcrypt hashing password
   $username = isset($_POST['username']);
   $password = isset($_POST['password']);
 
@@ -17,13 +18,19 @@
     } 
     else 
     {
-    $sql = "select * from  where username = '$username' and password = '$password' ";
+    $sql = "select * from login where username = '$username'";
 	  $query = mysqli_query($conn,$sql);
+    $passhash = mysqli_fetch_object($query);
     
-    //verify user (will add hashing soon)
-	if (mysqli_num_rows($query) !== 0) 
+    //verify user 
+    if (password_verify($password, $passhash->password)) 
     {
-      ?>
+        $_SESSION['username'] = $username;
+        header("location: ./captcha.php");             
+        } 
+        else
+        {               
+            ?>
             <script>
             if (!alert('User or Password NOT Found!')) 
             { //return login page if username of password not found in database
@@ -31,13 +38,6 @@
             }
             </script>
             <?php      
-      
-        } 
-        else
-        {     
-          $_SESSION['username'] = $username;
-      header("location: ./captcha.php");          
-            
         }
     }
 }
