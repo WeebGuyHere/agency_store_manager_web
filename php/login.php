@@ -21,14 +21,9 @@
 	  $query = mysqli_query($conn,$sql);
     
     //verify user (will add hashing soon)
-	if (mysqli_num_rows($query) == 0) 
+	if (mysqli_num_rows($query) !== 0) 
     {
-      $_SESSION['username'] = $username;
-      header("location: ./captcha.php");
-        } 
-        else
-        {               
-            ?>
+      ?>
             <script>
             if (!alert('User or Password NOT Found!')) 
             { //return login page if username of password not found in database
@@ -36,6 +31,13 @@
             }
             </script>
             <?php      
+      
+        } 
+        else
+        {     
+          $_SESSION['username'] = $username;
+      header("location: ./captcha.php");          
+            
         }
     }
 }
