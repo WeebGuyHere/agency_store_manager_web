@@ -1,9 +1,16 @@
+<?php
+  session_start();
+  if (isset($_SESSION['username']) && ($_SESSION['security_code']) )
+  {
+    
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!--icon-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -21,7 +28,7 @@
         <nav>
                 <ul class="primary-nav">
                     
-                    <li><a href="/index.html"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+                    <li><a href="./homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
                     <li><a href="#">Tổ chức</a>
                       <ul class ="menu-dropdown">
                         <li><a href="/html/ThemdaiLy.html">Quản lý các đại lý</a></li>
@@ -31,13 +38,13 @@
                     
                     <li><a href="#">Báo cáo</a>
                     <ul class ="menu-dropdown">
-                      <li><a href="/html/DoanhSo.html">Doanh số</a></li>
-                    <li><a href="/html/CongNo.html">Công nợ tháng</a></li>
+                      <li><a href="./html/DoanhSo.html">Doanh số</a></li>
+                    <li><a href="./html/CongNo.html">Công nợ tháng</a></li>
                     </li></ul>
                     <li><a href="#">Khách hàng</a>
                       <ul class ="menu-dropdown">
-                    <li><a href="/html/PhanHoi.html">Phản hồi</a></li>
-                    <li><a href="/html/YeuCau.html">Yêu cầu Khác hàng</a></li></li></ul>
+                    <li><a href="./html/PhanHoi.html">Phản hồi</a></li>
+                    <li><a href="./html/YeuCau.html">Yêu cầu Khác hàng</a></li></li></ul>
                     <li><a href="#">Contact</a>
                     <ul class="menu-dropdown">
                       <li><a href="#">Hotline: 0948232811</a></li>
@@ -45,7 +52,7 @@
                       <li><a href="https://www.instagram.com/">Instagram</a></li>
                     </ul></li>
                     <button>
-                    <li class ="login"><a href="login.html">Đăng nhập</a></li>
+                    <li class ="login"><a href="./php/signout.php?logout">Đăng xuất</a></li>
                     </button>
                 </ul>         
         </nav>   
@@ -116,3 +123,11 @@
 </body>
 
 </html>
+
+<?php
+  }
+  else 
+  {
+    header("location: ./index.php");
+  }
+?>
