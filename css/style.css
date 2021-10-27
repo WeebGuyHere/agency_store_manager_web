@@ -78,7 +78,7 @@ body .button li a{
 }
 body .button li a span{
   position:relative;
-  left: px;
+  
   background: rgb(92, 96, 131);
   
 }
@@ -378,16 +378,31 @@ body .pic{
  left: 100px;
 }
 body table{
-  position: relative;
+  position:relative;
  top: 170px;
  left: 100px;
 }
 body table tr{
-  text-align: left;
+  text-align: center;
   color: white;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
-
+  
+}
+.button_change {
+  display: inline;
+  width: 115px;
+  height: 25px;
+  background: #4E9CAF;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  line-height: 30px;
 }
 .Change{
 display: inline-block;

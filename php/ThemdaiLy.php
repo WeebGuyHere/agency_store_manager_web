@@ -2,7 +2,9 @@
   session_start();
   if (isset($_SESSION['username']) && ($_SESSION['security_code']) )
   {
-    
+    require_once('../lib/connection.php');
+    $query = "SELECT * FROM cacdaily";
+    $result = mysqli_query($conn,$query);
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +30,7 @@
         <nav>
                 <ul class="primary-nav">
                     
-                    <li><a href="./homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+                    <li><a href="../homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
                     <li><a href="#">Tổ chức</a>
                       <ul class ="menu-dropdown">
                         <li><a href="/html/ThemdaiLy.html">Quản lý các đại lý</a></li>
@@ -110,14 +112,44 @@
 <div class="ThemTV">
   <button class="Change"><li><a class ="save" href="#">Lưu</a></li></button>
     <button class="Change"><li><a class ="them" href="#">Thêm</a></li></button>
-    <button class="Change"><li><a class ="sua" href="#">Sửa</a></li></button>
-    <button class="Change"><li><a class ="xoa" href="#">Xóa</a></li></button>
     <button class="Change"><li><a class ="refresh" href="#">Refresh</a></li></button>
     </div>
 <table border=1 cellspacing=0 cellpading=0>  
-  <tr> <td>Put table here</td></tr>   
-  <tr> <td>Put table here</td></tr> 
-  <tr> <td>Put table here</td> </tr>  
+<t>
+  <th>Mã Đại Lý</th>
+  <th>Tên Đại Lý</th>
+  <th>Loại</th>
+  <th>Địa chỉ</th>
+  <th>Quận</th>
+  <th>Tel</th>
+  <th>Email</th>
+  <th>Ngày Tiếp Nhận</th>
+  <th>Tiền Nợ</th>
+  <th>Thay đổi</th>
+  </t>
+  <?php 
+          while($rows=mysqli_fetch_array($result))
+          {
+        ?>
+        <tr>
+          <td><?php echo $rows['MaDaiLy']; ?></td>
+          <td><?php echo $rows['TenDaiLy']; ?></td>
+          <td><?php echo $rows['Loai']; ?></td>
+          <td><?php echo $rows['DiaChi']; ?></td>
+          <td><?php echo $rows['Quan']; ?></td>
+          <td><?php echo $rows['DienThoai']; ?></td>
+          <td><?php echo $rows['Email']; ?></td>
+          <td><?php echo $rows['NgayTiepNhan']; ?></td>
+          <td><?php echo $rows['TienNo']; ?></td>
+          <td><a class ="button_change" href="./function/edit_user.php?id=<?php echo $rows['MaDaiLy']; ?>">Edit</a>
+          <a class ="button_change" href="./function/del_user.php?id=<?php echo $rows['MaDaiLy']; ?>">Delete</a></td>
+            <style>
+              
+            </style>
+        </tr>
+        <?php
+          }
+        ?>
   </table>  
   
 </body>
