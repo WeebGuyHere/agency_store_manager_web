@@ -33,9 +33,9 @@
                     <li><a href="../homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
                     <li><a href="#">Tổ chức</a>
                       <ul class ="menu-dropdown">
-                        <li><a href="/php/ThemdaiLy.php">Quản lý các đại lý</a></li>
-                        <li><a href="/php/ThemMatHang.html">Quản lý mặt hàng</a></li>
-                        <li><a href="/php/XuatPhieu.html">Xuất phiếu</a></li>
+                        <li><a href="../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
+                        <li><a href="../php/ThemMatHang.html">Quản lý mặt hàng</a></li>
+                        <li><a href="../php/XuatPhieu.html">Xuất phiếu</a></li>
                       </ul></li>
                     
                     <li><a href="#">Báo cáo</a>
