@@ -176,7 +176,7 @@ body .button li a span{
 
     .menu-dropdown1 {
         position: relative;
-        background-color: #045266;
+        background-color: #111d20;
         display: none;
         margin-top: 10px;
         margin-left: 170px;
@@ -212,62 +212,7 @@ body .button li a span{
       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
       
   }
-  .navigation ul {
-      position: absolute;
-      top:0px;
-      left:0px;
-      width:100%;
-      padding-left: 5px;
-      padding-top: 40px;
-  }
-  .navigation ul li 
-  {
-      position: relative;
-      list-style: none;
-      width: 100%; 
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 30px;
-  }
-  .navigation ul li.active 
-  {
-    background: rgb(255, 255, 255);
-    
-    
-  }
-  .navigation ul li a 
-  {
-    font-weight: bold;
-    font-size: large;
-    text-decoration: none;
-    width: 170px;
-    padding: 20px;
-    display: flex;
-    color: #fff;
-    
-    
-  }
-  .navigation ul li a .iconn
-  {
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 10px;
-    line-height:30px;
-    
-  }
-  .navigation ul li.active a
-  {
-    color: #080808
-  } 
-  .navigation ul li a:hover {
-    background-color: #e91159;
-    -webkit-transition: 0.4;
-    transition: 0.4;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    
-  }
-
+  
   
 /*slidebar*/
 .slidebar{
@@ -276,7 +221,7 @@ body .button li a span{
   top:150px;
   width: 250px;
   height: 700px;
-  background:#045266;
+  background:#000000;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -287,7 +232,7 @@ body .button li a span{
   color: white;
   text-align: center;
   line-height: 70px;
-  background: #1829eb;
+  background: #181f6e;
   user-select: none;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   border-top-left-radius: 20px;
@@ -382,7 +327,7 @@ body .pic{
 }
 .ThemTV{
 
- position: relative;
+ 
  top: 170px;
  left: 100px;
 }
@@ -399,7 +344,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
    
 }
 .ThemTV button{
-  position: relative;
+  
   bottom: 10px;
   background: black;
   margin: 0px 10px;
