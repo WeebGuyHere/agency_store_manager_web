@@ -31,20 +31,20 @@
                     <li><a href="./homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
                     <li><a href="#">Tổ chức</a>
                       <ul class ="menu-dropdown">
-                        <li><a href="/html/ThemdaiLy.html">Quản lý các đại lý</a></li>
-                        <li><a href="/html/ThemMatHang.html">Quản lý mặt hàng</a></li>
-                        <li><a href="/html/XuatPhieu.html">Xuất phiếu</a></li>
+                        <li><a href="/php/ThemdaiLy.php">Quản lý các đại lý</a></li>
+                        <li><a href="/php/ThemMatHang.html">Quản lý mặt hàng</a></li>
+                        <li><a href="/php/XuatPhieu.html">Xuất phiếu</a></li>
                       </ul></li>
                     
                     <li><a href="#">Báo cáo</a>
                     <ul class ="menu-dropdown">
-                      <li><a href="./html/DoanhSo.html">Doanh số</a></li>
-                    <li><a href="./html/CongNo.html">Công nợ tháng</a></li>
+                      <li><a href="./php/DoanhSo.html">Doanh số</a></li>
+                    <li><a href="./php/CongNo.html">Công nợ tháng</a></li>
                     </li></ul>
                     <li><a href="#">Khách hàng</a>
                       <ul class ="menu-dropdown">
-                    <li><a href="./html/PhanHoi.html">Phản hồi</a></li>
-                    <li><a href="./html/YeuCau.html">Yêu cầu Khác hàng</a></li></li></ul>
+                    <li><a href="./php/PhanHoi.html">Phản hồi</a></li>
+                    <li><a href="./php/YeuCau.html">Yêu cầu Khác hàng</a></li></li></ul>
                     <li><a href="#">Contact</a>
                     <ul class="menu-dropdown">
                       <li><a href="#">Hotline: 0948232811</a></li>
@@ -77,19 +77,19 @@
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ Chức</a>
           <ul class ="menu-dropdown1">
-            <li><a href="./html/ThemdaiLy.html">Quản lý các đại lý</a></li>
-            <li><a href="./html/ThemMatHang.html">Quản lý mặt hàng</a></li>
-            <li><a href="./html/XuatPhieu.html">Xuất phiếu</a></li>
+            <li><a href="./php/ThemdaiLy.html">Quản lý các đại lý</a></li>
+            <li><a href="./php/ThemMatHang.html">Quản lý mặt hàng</a></li>
+            <li><a href="./php/XuatPhieu.html">Xuất phiếu</a></li>
           </ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
           <ul class ="menu-dropdown1">
-            <li><a href="./html/DoanhSo.html">Doanh số</a></li>
-          <li><a href="./html/CongNo.html">Công nợ tháng</a></li>
+            <li><a href="./php/DoanhSo.html">Doanh số</a></li>
+          <li><a href="./php/CongNo.html">Công nợ tháng</a></li>
           </li></ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
           <ul class ="menu-dropdown1">
-            <li><a href="./html/PhanHoi.html">Phản hồi</a></li>
-            <li><a href="./html/YeuCau.html">Yêu cầu Khác hàng</a></li></li></ul></li>
+            <li><a href="./php/PhanHoi.html">Phản hồi</a></li>
+            <li><a href="./php/YeuCau.html">Yêu cầu Khác hàng</a></li></li></ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
           <ul class="menu-dropdown1">
             <li><a href="#">Hotline: 0948232811</a></li>
