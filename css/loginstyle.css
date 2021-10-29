@@ -15,7 +15,7 @@
     background-image: url(/pic/picb.jpg);
     background-size: cover;
     background-position: center;
-    background: rosybrown;
+    background: rgb(255, 255, 255);
   }
   ::selection{
     color: #fff;

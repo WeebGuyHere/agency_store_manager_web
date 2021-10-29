@@ -21,67 +21,85 @@ body .pic{
   
 }
 body .pic2{
-  width:100%;
+  width:130%;
+  position: relative;
+  right:5%;
+  bottom:30px;
+
+  
 }
 body .pic3{
-  width:100%;
+  position: relative; 
+  width:130%;
+  right:5%;
+  bottom:30px;
 }
 body li.QL{
   text-align: center;
-  font-size: 40px;
-  color:#fff;
+  font-size: 60px;
+  color:rgb(255, 255, 255);
   position: relative;
- top:-1300px;
-  left: 300px;
+ top:-1900px;
+  left: 0px;
   list-style-type: none !important;
   font-weight: 600;
-  font-family:serif;
+  font-family:boroto;
+  font-style: italic;
+  
 }
 body li.QL2{
   text-align: center;
-  font-size: 40px;
-  color:#fff;
+  font-size: 60px;
+  color:rgb(255, 255, 255);
   position: relative;
-  top:-1300px;
-  left: 300px;
+  top:-1900px;
+  left: 0px;
   list-style-type: none !important;
   font-weight: 800;
-  font-family:serif;
+  font-family:boroto;
+  font-style: italic;
+ 
 }
 body li.QL3{
   text-align: center;
-  font-size: 30px;
-  color:#fff;
+  font-size: 50px;
+  color:rgb(255, 255, 255);
   position: relative;
-  top:-1200px;
-  left: 300px;
+  top:-1850px;
+  left: 0px;
   list-style-type: none !important;
+  font-family: boroto;
+  font-style: italic;
+ 
  
   
 }
 body .button{
   position: relative;
-  background: rgb(255, 255, 0);
+  background: yellow;
   width:250px;
   height: 50px;
-  left: 950px;
- bottom: 1050px;
+  left: 790px;
+ bottom: 1800px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    
+  background: .5s;
+
 }
-body .button a:hover{
-  background-color: #4e45d4;
-    -webkit-transition: 0.4;
-    transition: 0.4;
-    height: 2px;
+
+body .button:hover{
+  background: transparent;
+ 
+   
 }
 body .button li {
   list-style-type: none !important;
 } 
 body .button li a{
   text-align: center;
-  font-size: 14px;
+  font-size: 17px;
   font-weight:600;
+  font-family: arial;
+  margin-right: 14px;
 }
 body .button li a span{
   position:relative;

@@ -60,7 +60,7 @@
                        </label>
                     </li>
                     <button>
-                    <li class ="login"><a href="./php/signout.php?logout">Đăng xuất</a></li>
+                    <li class ="login"><a href="../php/signout.php?logout">Đăng xuất</a></li>
                     </button>
                 </ul>         
         </nav>   

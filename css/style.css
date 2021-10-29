@@ -35,15 +35,17 @@ body .pic2{
   
 }
 body .pic3{
-  width:100%;
+  position: relative; 
+  width:130%;
   right:5%;
+  bottom:30px;
 }
 body li.QL{
   text-align: center;
   font-size: 60px;
   color:rgb(255, 255, 255);
   position: relative;
- top:-1400px;
+ top:-1900px;
   left: 0px;
   list-style-type: none !important;
   font-weight: 600;
@@ -56,7 +58,7 @@ body li.QL2{
   font-size: 60px;
   color:rgb(255, 255, 255);
   position: relative;
-  top:-1400px;
+  top:-1900px;
   left: 0px;
   list-style-type: none !important;
   font-weight: 800;
@@ -69,7 +71,7 @@ body li.QL3{
   font-size: 50px;
   color:rgb(255, 255, 255);
   position: relative;
-  top:-1350px;
+  top:-1850px;
   left: 0px;
   list-style-type: none !important;
   font-family: boroto;
@@ -84,9 +86,10 @@ body .button{
   width:250px;
   height: 50px;
   left: 790px;
- bottom: 1300px;
+ bottom: 1800px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   background: .5s;
+
 }
 
 body .button:hover{
@@ -99,7 +102,7 @@ body .button li {
 } 
 body .button li a{
   text-align: center;
-  font-size: 14px;
+  font-size: 17px;
   font-weight:600;
   font-family: arial;
   margin-right: 14px;

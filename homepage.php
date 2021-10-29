@@ -30,7 +30,7 @@
  
  <img class="pic2" src="./pic/5.jpg">
  
- <img class="pic3" src="./pic/right.png">
+ <img class="pic3" src="./pic/2.jpg">
  <li class ="QL">Trang web quản lý đại lý cho các doanh</li>
   <li class ="QL2"> nghiệp vừa và nhỏ</li>
   <li class="QL3">Trang web giúp quản lý các đại lý một cách khoa học và hiệu quả</li>
