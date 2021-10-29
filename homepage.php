@@ -50,7 +50,13 @@
                      <ul class ="menu-dropdown">
                        <li><a href="./php/ThemdaiLy.php">Quản lý các đại lý</a></li>
                        <li><a href="./php/ThemMatHang.html">Quản lý mặt hàng</a></li>
-                       <li><a href="./php/XuatPhieu.html">Xuất phiếu</a></li>
+                       <li><a href="./php/XuatPhieu.html">Xuất phiếu</a>
+                       <ul class ="menu-dropdown">
+                        <li><a href="#">Phiếu thu tiền</a></li>
+                        <li><a href="#">Phiếu xuất hàng</a></li>
+                        
+                      </li>
+                      </ul></li>
                      </ul></li>
                      
             
@@ -97,7 +103,13 @@
           <ul class ="menu-dropdown1">
             <li><a href="./php/ThemdaiLy.php">Quản lý các đại lý</a></li>
             <li><a href="./php/ThemMatHang.html">Quản lý mặt hàng</a></li>
-            <li><a href="./php/XuatPhieu.html">Xuất phiếu</a></li>
+            <li><a href="./php/XuatPhieu.html">Xuất phiếu</a>
+            <ul class ="menu-dropdown1">
+                        <li><a href="#">Phiếu thu tiền</a></li>
+                        <li><a href="#">Phiếu xuất hàng</a></li>
+                        
+                      </li>
+                      </ul></li>
           </ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
           <ul class ="menu-dropdown1">

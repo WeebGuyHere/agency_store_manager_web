@@ -110,7 +110,7 @@ body .button li a span{
 .second-header {
   left: 5%;
   opacity: 1;
-  background-color: #2c3ce7;
+  background-color: #5d5e68;
   border: 0px solid #f7f2f2;
   border-radius: 10px;
   -webkit-box-shadow: 0px 3px px 0px #00000008;
@@ -246,7 +246,7 @@ border-bottom: 1px solid rgb(255, 255, 255);
   /*hide menu dropdown*/
   .menu-dropdown {
     position: absolute;
-    background-color: #4d5bf9;
+    background-color: #5d5e68;
     display: none; 
   }
   
