@@ -64,8 +64,14 @@
                       <li><a href="https://vi-vn.facebook.com/">Facebook</a></li>
                       <li><a href="https://www.instagram.com/">Instagram</a></li>
                     </ul></li>
+                    <li class="search-icon">
+                       <input type="search" placeholder="Tìm kiếm...">
+                       <label class="icon">
+                       <img src="./pic/Icon feather-search.png" alt="Search">
+                       </label>
+                    </li>
                     <button>
-                    <li class ="login"><a href="./php/signout.php?logout">Đăng Xuất</a></li>
+                    <li class ="login"><a href="./php/signout.php?logout">Đăng xuất</a></li>
                     </button>
                 </ul>         
         </nav>  
