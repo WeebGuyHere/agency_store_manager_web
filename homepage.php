@@ -26,50 +26,55 @@
 
 <body>
  
+<body>
  
-  <img class="pic2" src="./pic/left.png">
-  <img class="pic3" src="./pic/right.png">
-  <li class ="QL">Trang web quản lý đại lý cho các doanh</li>
-   <li class ="QL2"> nghiệp vừa và nhỏ</li>
-   <li class="QL3">Trang web giúp quản lý các đại lý một cách khoa học và hiệu quả</li>
-   <button class="button">
-     <li class="QL4"><a herf="#">Đăng kí làm thành viên</a><span><ion-icon class="icoc" name="arrow-forward-circle-outline"></ion-icon></span></li>
-   </button>
-   <li class="ND1"></li>
-  <main class="custom">
-    <section class="second-header"> 
-        <nav>
-                <ul class="primary-nav">
-                    
-                    <li><a href="./homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
-                    <li><a href="#">Tổ chức</a>
-                      <ul class ="menu-dropdown">
-                        <li><a href="./php/ThemdaiLy.php">Quản lý các đại lý</a></li>
-                        <li><a href="./php/ThemMatHang.html">Quản lý mặt hàng</a></li>
-                        <li><a href="./php/XuatPhieu.html">Xuất phiếu</a></li>
-                      </ul></li>
-                    
-                    <li><a href="#">Báo cáo</a>
-                    <ul class ="menu-dropdown">
-                      <li><a href="./php/DoanhSo.html">Doanh số</a></li>
-                    <li><a href="./php/CongNo.html">Công nợ tháng</a></li>
-                    </li></ul>
-                    <li><a href="#">Khách hàng</a>
-                      <ul class ="menu-dropdown">
-                    <li><a href="./php/PhanHoi.html">Phản hồi</a></li>
-                    <li><a href="./php/YeuCau.html">Yêu cầu Khác hàng</a></li></li></ul>
-                    <li><a href="#">Contact</a>
-                    <ul class="menu-dropdown">
-                      <li><a href="#">Hotline: 0948232811</a></li>
-                      <li><a href="https://vi-vn.facebook.com/">Facebook</a></li>
-                      <li><a href="https://www.instagram.com/">Instagram</a></li>
-                    </ul></li>
-                    <li class="search-icon">
-                       <input type="search" placeholder="Tìm kiếm...">
-                       <label class="icon">
-                       <img src="./pic/Icon feather-search.png" alt="Search">
-                       </label>
-                    </li>
+ <img class="pic2" src="./pic/5.jpg">
+ 
+ <img class="pic3" src="./pic/right.png">
+ <li class ="QL">Trang web quản lý đại lý cho các doanh</li>
+  <li class ="QL2"> nghiệp vừa và nhỏ</li>
+  <li class="QL3">Trang web giúp quản lý các đại lý một cách khoa học và hiệu quả</li>
+  <button class="button">
+    <li class="QL4"><a herf="#">Đăng kí làm thành viên</a><span><ion-icon class="icoc" name="arrow-forward-circle-outline"></ion-icon></span></li>
+  </button>
+  <li class="ND1"></li>
+ <main class="custom">
+
+</li>
+   <section class="second-header"> 
+       <nav>
+               <ul class="primary-nav">
+                 <li>  
+                   <li><a href="./index.php"><span><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+                   <li><a href="#">Tổ chức</a>
+                     <ul class ="menu-dropdown">
+                       <li><a href="./php/ThemdaiLy.php">Quản lý các đại lý</a></li>
+                       <li><a href="./php/ThemMatHang.html">Quản lý mặt hàng</a></li>
+                       <li><a href="./php/XuatPhieu.html">Xuất phiếu</a></li>
+                     </ul></li>
+                     
+            
+                   <li><a href="#">Báo cáo</a>
+                   <ul class ="menu-dropdown">
+                     <li><a href="./php/DoanhSo.html">Doanh số</a></li>
+                   <li><a href="./php/CongNo.html">Công nợ tháng</a></li>
+                   </li></ul>
+                   <li><a href="#">Khách hàng</a>
+                     <ul class ="menu-dropdown">
+                   <li><a href="./php/PhanHoi.html">Phản hồi</a></li>
+                   <li><a href="./php/YeuCau.html">Yêu cầu Khác hàng</a></li></li></ul>
+                   <li><a href="#">Contact</a>
+                   <ul class="menu-dropdown">
+                     <li><a href="#">Hotline: 0948232811</a></li>
+                     <li><a href="https://vi-vn.facebook.com/">Facebook</a></li>
+                     <li><a href="https://www.instagram.com/">Instagram</a></li>
+                   </ul></li>
+                   <li class="search-icon">
+                      <input type="search" placeholder="Tìm kiếm...">
+                      <label class="icon">
+                      <img src="./pic/Icon feather-search.png" alt="Search">
+                      </label>
+                   </li>
                     <button>
                     <li class ="login"><a href="./php/signout.php?logout">Đăng xuất</a></li>
                     </button>

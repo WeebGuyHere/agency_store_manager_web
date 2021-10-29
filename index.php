@@ -19,8 +19,8 @@
 
 <body>
  
- 
-  <img class="pic2" src="./pic/left.png">
+  <img class="pic2" src="./pic/5.jpg">
+  
   <img class="pic3" src="./pic/right.png">
   <li class ="QL">Trang web quản lý đại lý cho các doanh</li>
    <li class ="QL2"> nghiệp vừa và nhỏ</li>
@@ -36,7 +36,7 @@
         <nav>
                 <ul class="primary-nav">
                   <li>  
-                    <li><a href="./index.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+                    <li><a href="./index.php"><span><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
                     <li><a href="#">Tổ chức</a>
                       <ul class ="menu-dropdown">
                         <li><a href="./php/ThemdaiLy.php">Quản lý các đại lý</a></li>

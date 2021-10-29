@@ -2,7 +2,7 @@
 body {
   width: auto; 
 height: auto;
-  background: #0015fd;
+  background: #ffffff;
   font-family: sans-serif;
   overflow-x: hidden;
 }
@@ -27,42 +27,54 @@ body .pic{
   
 }
 body .pic2{
-  width:100%;
+  width:130%;
+  position: relative;
+  right:5%;
+  bottom:30px;
+
   
 }
 body .pic3{
   width:100%;
+  right:5%;
 }
 body li.QL{
   text-align: center;
-  font-size: 40px;
-  color:#fff;
+  font-size: 60px;
+  color:rgb(255, 255, 255);
   position: relative;
  top:-1400px;
-  left: 300px;
+  left: 0px;
   list-style-type: none !important;
   font-weight: 600;
-  font-family:serif;
+  font-family:boroto;
+  font-style: italic;
+  
 }
 body li.QL2{
   text-align: center;
-  font-size: 40px;
-  color:#fff;
+  font-size: 60px;
+  color:rgb(255, 255, 255);
   position: relative;
   top:-1400px;
-  left: 300px;
+  left: 0px;
   list-style-type: none !important;
   font-weight: 800;
-  font-family:serif;
+  font-family:boroto;
+  font-style: italic;
+ 
 }
 body li.QL3{
   text-align: center;
-  font-size: 30px;
-  color:#fff;
+  font-size: 50px;
+  color:rgb(255, 255, 255);
   position: relative;
-  top:-1300px;
-  left: 300px;
+  top:-1350px;
+  left: 0px;
   list-style-type: none !important;
+  font-family: boroto;
+  font-style: italic;
+ 
  
   
 }
@@ -71,16 +83,16 @@ body .button{
   background: yellow;
   width:250px;
   height: 50px;
-  left: 1120px;
- bottom: 1250px;
+  left: 790px;
+ bottom: 1300px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    
+  background: .5s;
 }
-body .button a:hover{
-  background-color: #4e45d4;
-    -webkit-transition: 0.4;
-    transition: 0.4;
-    height: 2px;
+
+body .button:hover{
+  background: transparent;
+ 
+   
 }
 body .button li {
   list-style-type: none !important;
@@ -89,18 +101,19 @@ body .button li a{
   text-align: center;
   font-size: 14px;
   font-weight:600;
+  font-family: arial;
+  margin-right: 14px;
 }
-body .button li a span{
+
+button .icoc{
   position:relative;
-  
-  background: rgb(92, 96, 131);
-  
+  font-size: 14px;
+  bottom: -2px;
 }
-
-
 .second-header {
+    left:8%;
     opacity: 1;
-    background-color: #2c3ce7;
+    background-color: #5d5e68;
     border: 0px solid #f7f2f2;
     border-radius: 10px;
     -webkit-box-shadow: 0px 3px px 0px #00000008;
@@ -144,6 +157,7 @@ body .button li a span{
     display: block;
     color: #fff;
     text-align: center;
+   
     
   }
   
@@ -155,6 +169,10 @@ body .button li a span{
     top:-80px;
     border: 2px solid #ececec;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: .5s;
+  }
+  .second-header nav .primary-nav button:hover{
+  background: transparent;
   }
   
   .second-header nav .primary-nav li.login{
@@ -216,6 +234,7 @@ body .button li a span{
       margin-top: 5px;
       margin-bottom: 5px;
       height: 20px;
+      
     }
     
     .second-header nav ul .search-icon .icon:hover {
@@ -225,10 +244,10 @@ body .button li a span{
     
     
   
-  .second-header nav .primary-nav a:hover {
-    background-color: #e91159;
+  .second-header nav .primary-nav:hover {
     -webkit-transition: 0.4;
     transition: 0.4;
+
     
     
   }
@@ -236,16 +255,16 @@ body .button li a span{
   /*hide menu dropdown*/
   .menu-dropdown {
     position: absolute;
-    background-color: #4d5bf9;
+    background-color: #53556d;
     display: none; 
-  }
-  
-  /*show menu*/
-  .primary-nav li:hover > .menu-dropdown {
-    display: block;
     
   }
 
+  /*show menu*/
+  .primary-nav li:hover > .menu-dropdown {
+    display: block;
+  }
+  
     .menu-dropdown1 {
         position: relative;
         background-color: #111d20;
@@ -270,21 +289,7 @@ body .button li a span{
         display: block;
       }
     
-  .navigation {
-      position: fixed;
-      top: 120px;
-      left:5px;
-      bottom:20px;
-      width: 70px;
-      border-radius: 10px;
-      box-sizing: initial;
-      border-left: 5px solid #4d5bf9;
-      background:#4d5bf9;
-      transition: width 0.5s;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-      
-  }
-  
+
   
 /*slidebar*/
 .slidebar{
