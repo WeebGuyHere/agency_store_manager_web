@@ -2,7 +2,7 @@
 body {
   width: auto; 
 height: auto;
-  background: #2e3cd1;
+  background: #0015fd;
   font-family: sans-serif;
   overflow-x: hidden;
 }
@@ -12,6 +12,12 @@ body .custom {
   margin-bottom: 20px;
   margin-right: 60px;
   margin-left: 60px;
+
+}
+body .custom button{
+  position:relative;
+  top:5px;
+ 
   
 }
 body .pic{
@@ -22,6 +28,7 @@ body .pic{
 }
 body .pic2{
   width:100%;
+  
 }
 body .pic3{
   width:100%;
@@ -31,7 +38,7 @@ body li.QL{
   font-size: 40px;
   color:#fff;
   position: relative;
- top:-1200px;
+ top:-1400px;
   left: 300px;
   list-style-type: none !important;
   font-weight: 600;
@@ -42,7 +49,7 @@ body li.QL2{
   font-size: 40px;
   color:#fff;
   position: relative;
-  top:-1200px;
+  top:-1400px;
   left: 300px;
   list-style-type: none !important;
   font-weight: 800;
@@ -53,7 +60,7 @@ body li.QL3{
   font-size: 30px;
   color:#fff;
   position: relative;
-  top:-1100px;
+  top:-1300px;
   left: 300px;
   list-style-type: none !important;
  
@@ -64,8 +71,8 @@ body .button{
   background: yellow;
   width:250px;
   height: 50px;
-  left: 950px;
- bottom: 1050px;
+  left: 1120px;
+ bottom: 1250px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     
 }
@@ -89,6 +96,8 @@ body .button li a span{
   background: rgb(92, 96, 131);
   
 }
+
+
 .second-header {
     opacity: 1;
     background-color: #2c3ce7;
@@ -107,6 +116,7 @@ body .button li a span{
     
     top:94px;
     width: auto;
+    height:47px
   
   }
   
@@ -114,7 +124,7 @@ body .button li a span{
     margin: 0;
     padding: 0;
     list-style: none;
-    text-align: center;
+    
     height: 42px;
     
   }
@@ -138,21 +148,83 @@ body .button li a span{
   }
   
   .second-header nav .primary-nav button {
-    background: rgb(92, 96, 131);
+    background: rgb(51, 17, 17);
     margin: 0px 300px 0px 150px;
     position: relative;
-    left:695px;
-    bottom: 45px;
-    
+    left:1100px;
+    top:-80px;
+    border: 2px solid #ececec;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   }
+  
   .second-header nav .primary-nav li.login{
     display: inline-block;
     
-    
-   
-    
-    
   }
+    .second-header nav ul li.logo {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      font-size: 30px;
+      
+    }
+    
+    .second-header nav ul li.logo img {
+      width: 170px;
+      height: 30px;
+    }
+    
+    .second-header nav ul .search-icon {
+      margin-top: 10px;
+      height: 30px;
+      width: 240px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      background: #f2f2f2;
+      border-radius: 5px;
+      margin-left: 1000px;
+      position: relative;
+      bottom: 45px;
+      right:5px;
+    }
+    
+    .second-header nav ul .search-icon input {
+      height: 100%;
+      width: 200px;
+      border: none;
+      outline: none;
+      padding: 0 10px;
+      color: #000;
+      font-size: 16px;
+      border-radius: 5px 0 0 5px;
+    }
+    
+    .second-header nav ul .search-icon .icon {
+      height: 90%;
+      width: 40px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid #cccccc;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+    
+    .second-header nav ul .search-icon .icon img {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      height: 20px;
+    }
+    
+    .second-header nav ul .search-icon .icon:hover {
+      background: #e6e6e6;
+    }
+    
+    
+    
+  
   .second-header nav .primary-nav a:hover {
     background-color: #e91159;
     -webkit-transition: 0.4;
@@ -219,13 +291,17 @@ body .button li a span{
   position: fixed;
   left: -250px;
   top:150px;
-  width: 250px;
+  width: 252px;
   height: 700px;
   background:#000000;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   transition: all .5s ease;
+ 
+  
 }
 .slidebar header{
   font-size: 22px;
@@ -237,6 +313,7 @@ body .button li a span{
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  
 }
 .slidebar ul a{
   display: block;
@@ -260,7 +337,8 @@ ul li:hover a{
   padding-left: 50px;
 }
 .slidebar ul a span {
-  margin-right: 16px;
+  margin-right: 14px;
+  
 
 }
 #check{

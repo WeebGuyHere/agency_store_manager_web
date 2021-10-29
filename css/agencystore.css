@@ -139,8 +139,8 @@ body .button li a span{
     background: rgb(92, 96, 131);
     margin: 0px 300px 0px 150px;
     position: relative;
-    left:720px;
-    bottom: 45px;
+    left:300px;
+    bottom: 55px;
     
   }
   .second-header nav .primary-nav li.login{
@@ -315,7 +315,7 @@ body .pic{
  left: 100px;
 }
 table{
-  position:sticky;
+  
  top: 170px;
  left: 100px;
  height:20px;
