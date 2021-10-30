@@ -46,6 +46,12 @@
                <ul class="primary-nav">
                  <li>  
                    <li><a href="./index.php"><span><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+                   <li><a href="#">Admin</a>
+                   <ul class="menu-dropdown">
+                     <li><a href="#">Quản trị tài khoản</a></li>
+                     <li><a href="#">Facebook</a></li>
+                     <li><a href="#">Instagram</a></li>
+                   </ul></li>
                    <li><a href="#">Tổ chức</a>
                      <ul class ="menu-dropdown">
                        <li><a href="./php/ThemdaiLy.php">Quản lý các đại lý</a></li>
@@ -58,8 +64,6 @@
                       </li>
                       </ul></li>
                      </ul></li>
-                     
-            
                    <li><a href="#">Báo cáo</a>
                    <ul class ="menu-dropdown">
                      <li><a href="./php/DoanhSo.php">Doanh số</a></li>
@@ -69,12 +73,7 @@
                      <ul class ="menu-dropdown">
                    <li><a href="./php/PhanHoi.php">Phản hồi</a></li>
                    <li><a href="./php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul>
-                   <li><a href="#">Contact</a>
-                   <ul class="menu-dropdown">
-                     <li><a href="#">Hotline: 0948232811</a></li>
-                     <li><a href="https://vi-vn.facebook.com/">Facebook</a></li>
-                     <li><a href="https://www.instagram.com/">Instagram</a></li>
-                   </ul></li>
+                  
                    <li class="search-icon">
                       <input type="search" placeholder="Tìm kiếm...">
                       <label class="icon">
@@ -82,7 +81,7 @@
                       </label>
                    </li>
                     <button>
-                    <li class ="login"><a href="../php/signout.php?logout">Đăng xuất</a></li>
+                    <li class ="login"><a href="./php/signout.php?logout">Đăng xuất</a></li>
                     </button>
                 </ul>         
         </nav>  
