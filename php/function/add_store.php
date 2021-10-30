@@ -31,12 +31,12 @@
                     <li><a href="../homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
                     <li><a href="#">Tổ chức</a>
                       <ul class ="menu-dropdown">
-                        <li><a href="../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
-                        <li><a href="../php/ThemMatHang.php">Quản lý mặt hàng</a></li>
-                        <li><a href="../php/XuatPhieu.php">Xuất phiếu</a>
+                        <li><a href="../../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
+                        <li><a href="../../php/ThemMatHang.php">Quản lý mặt hàng</a></li>
+                        <li><a href="../../php/XuatPhieu.php">Xuất phiếu</a>
                         <ul class ="menu-dropdown">
-              <li><a href="../php/PhieuThuTien.php">Phiếu thu tiền</a></li>
-              <li><a href="../php/Phieuxuathang.php">Phiếu xuất hàng</a></li>
+              <li><a href="../../php/PhieuThuTien.php">Phiếu thu tiền</a></li>
+              <li><a href="../../php/Phieuxuathang.php">Phiếu xuất hàng</a></li>
               
             </li>
             </ul></li>
@@ -44,13 +44,13 @@
                     
                     <li><a href="#">Báo cáo</a>
                     <ul class ="menu-dropdown">
-                      <li><a href="../php/DoanhSo.php">Doanh số</a></li>
-                    <li><a href="../php/CongNo.php">Công nợ tháng</a></li>
+                      <li><a href="../../php/DoanhSo.php">Doanh số</a></li>
+                    <li><a href="../../php/CongNo.php">Công nợ tháng</a></li>
                     </li></ul>
                     <li><a href="#">Khách hàng</a>
                       <ul class ="menu-dropdown">
-                    <li><a href="../php/PhanHoi.php">Phản hồi</a></li>
-                    <li><a href="../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul>
+                    <li><a href="../../php/PhanHoi.php">Phản hồi</a></li>
+                    <li><a href="../../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul>
                     <li><a href="#">Contact</a>
                     <ul class="menu-dropdown">
                       <li><a href="#">Hotline: 0948232811</a></li>
@@ -60,11 +60,11 @@
                     <li class="search-icon">
                        <input type="search" placeholder="Tìm kiếm...">
                        <label class="icon">
-                       <img src="../pic/Icon feather-search.png" alt="Search">
+                       <img src="../../pic/Icon feather-search.png" alt="Search">
                        </label>
                     </li>
                     <button>
-                    <li class ="login"><a href="../php/signout.php?logout">Đăng xuất</a></li>
+                    <li class ="login"><a href="../../php/signout.php?logout">Đăng xuất</a></li>
                     </button>
                 </ul>         
         </nav>   
@@ -89,25 +89,25 @@
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ Chức</a>
           <ul class ="menu-dropdown1">
-            <li><a href="../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
-            <li><a href="../php/ThemMatHang.php">Quản lý mặt hàng</a></li>
-            <li><a href="../php/XuatPhieu.php">Xuất phiếu</a>
+            <li><a href="../../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
+            <li><a href="../../php/ThemMatHang.php">Quản lý mặt hàng</a></li>
+            <li><a href="../../php/XuatPhieu.php">Xuất phiếu</a>
             <ul class ="menu-dropdown1">
-              <li><a href="../php/PhieuThuTien.php">Phiếu thu tiền</a></li>
-              <li><a href="../php/Phieuxuathang.php">Phiếu xuất hàng</a></li>
+              <li><a href="../../php/PhieuThuTien.php">Phiếu thu tiền</a></li>
+              <li><a href="../../php/Phieuxuathang.php">Phiếu xuất hàng</a></li>
               
             </li>
             </ul> </li>
           </ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
           <ul class ="menu-dropdown1">
-            <li><a href="../php/DoanhSo.php">Doanh số</a></li>
-          <li><a href="../php/CongNo.php">Công nợ tháng</a></li>
+            <li><a href="../../php/DoanhSo.php">Doanh số</a></li>
+          <li><a href="../../php/CongNo.php">Công nợ tháng</a></li>
           </li></ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
           <ul class ="menu-dropdown1">
-            <li><a href="../php/PhanHoi.php">Phản hồi</a></li>
-            <li><a href="../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul></li>
+            <li><a href="../../php/PhanHoi.php">Phản hồi</a></li>
+            <li><a href="../../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
           <ul class="menu-dropdown1">
             <li><a href="#">Hotline: 0948232811</a></li>
@@ -125,9 +125,57 @@
       <br><br>
     </form>
   </div>
+  <body class="add-store">
+    <form class="add-form">
+        <div class="form-group">
+         <li>Mã đại lý</li> <input class="input0" type="text" >
+        </div>
+        <div class="form-group">
+         <li>Tên đại lý</li><input type="text">
+     </div>
+     <div class="form-group">
+         <li>Địa chỉ</li><input class="input1" type="text">
+     </div>
+     <div class="form-group">
+         <li>Quận</li><input class="input2" type="text">
+     </div>
+     
+    </form>
+    <form class="add-form2">
+     <div class="form-group">
+         <li>Điện Thoại</li><input class="input3" type="text">
+     </div>
+     <div class="form-group">
+         <li>Email</li><input class="input4" type="text">
+     </div>
+     <div class="form-group">
+         <li>Tiền nợ</li><input class="input5 type="text">
+         </div>
+     <div class="form-group">
+         <li>Ngày tiếp nhận</li><input type="text">
+         </div>
+         <div class="form-group">
+         <li class="type1">Loại</li> <input class="input6" type="text" >
+        </div>
+    </form></body>
+  
+    <button class="type-form1">
+        <li><a herf="#">Thêm</a></li>
+    </button>
+    <button class="type-form2">
+        <li><a herf="#">Hủy</a></li>
+    </button>
+  </body>
   
 </body>
-
+<div class="footer">
+    <ul class="list-inline">
+        <li><a href="#">Home</a></li><span>|</span>
+        <li><a href="#">About Us</a></li><span>|</span>
+        <li><a href="#">Contact Us</a></li><span>|</span>
+        <li><a href="#">Feedback</a></li>
+        </ul>
+  </div>
 </html>
 
 <?php
@@ -137,7 +185,7 @@
     ?>
       <script>
         if (!alert('You MUST login first!')) {
-          document.location = "./login.php";
+          document.location = "././login.php";
         }
         </script>
         <?php
