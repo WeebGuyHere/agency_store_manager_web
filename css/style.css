@@ -5,6 +5,7 @@ height: auto;
   background: #ffffff;
   font-family: sans-serif;
   overflow-x: hidden;
+  list-style-type: none !important;
 }
 
 body .custom {
@@ -396,10 +397,8 @@ body .pic{
   
 }
 #footer{
-  position: relative;
-  width:auto;
-  background: #080808;
-  margin-right: 10px;
+ bottom:500px;
+  background: #000000;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .list-inline{
@@ -445,6 +444,4 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-
-
 }

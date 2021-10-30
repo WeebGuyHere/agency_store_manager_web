@@ -471,6 +471,77 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-
-
+}
+.add-store{
+  background: silver;
+}
+.add-form{
+  list-style-type: none !important;
+  margin-left: 350px;
+  margin-top: 120px;
+  height:auto;
+  width: auto;
+}
+.add-form2{
+  list-style-type: none !important;
+  margin-left: 840px;
+  margin-top: -230px;
+}
+.form-group li{
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-family: boroto;
+  font-size: 30px;
+}
+.form-group input{
+  height: 25px;
+  width: 200px;
+  border: 5px 5px 5px 5px;
+}
+.input1{
+  margin-left: 35px;
+}
+.input2{
+  margin-left: 57px;
+}
+.input3{
+  margin-left: 46px;
+}
+.input4{
+margin-left: 110px;
+}
+.type-form{
+  background: rgb(236, 220, 220);
+  position: relative;
+  margin: 0px 0px 0px 700px;
+  border: 2px solid #4b4545;
+  background: .5s;
+  top:-149px;
+}
+.type-form:hover{
+background: transparent;
+}
+.type-form li{
+  list-style-type: none !important;
+  color: #000000;
+  font-size: 15px;
+}
+.type-form1{
+  background: rgb(236, 220, 220);
+  position: relative;
+  border: 2px solid #4b4545;
+  background: .5s;
+  top:84px;
+  right:300px;
+  height:30px;
+}
+.type-form1:hover{
+background: transparent;
+}
+.type-form1 li{
+  list-style-type: none !important;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
 }

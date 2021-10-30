@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-   
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -131,16 +131,15 @@
         $('.menu-dropdown1').toggleClass("show");
       });
     </script>
+   
    <div id="footer">
     <ul class="list-inline">
         <li><a href="#">Home</a></li><span>|</span>
         <li><a href="#">About Us</a></li><span>|</span>
         <li><a href="#">Contact Us</a></li><span>|</span>
         <li><a href="#">Feedback</a></li>
-        
-    </ul>
-</div>
-</div>
+        </ul>
+     </div>
 </body>
 
 </html>
