@@ -15,7 +15,7 @@
     background-image: url(/pic/picb.jpg);
     background-size: cover;
     background-position: center;
-    background: rgb(255, 255, 255);
+    background: linear-gradient(225deg,#ccffff, #ffcccc);
   }
   ::selection{
     color: #fff;

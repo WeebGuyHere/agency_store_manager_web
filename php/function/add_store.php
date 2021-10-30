@@ -1,18 +1,16 @@
 <?php
   session_start();
+  require_once('../../lib/connection.php');
   if (isset($_SESSION['username']) && ($_SESSION['security_code']) )
   {
-    require_once('../lib/connection.php');
-    $query = "SELECT * FROM cacdaily";
-    $result = mysqli_query($conn,$query);
-  
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/agencystore.css">
+    <link rel="stylesheet" href="../../css/agencystore.css">
     <!--icon-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -121,52 +119,12 @@
     </div>
     
     </main>
-    <hr style="border: 0">
-    <script>
-      $('.feat-btn').click(function(){
-        $('.menu-dropdown1').toggleClass("show");
-      });
-    </script>
-<div class="ThemTV">
-  <button class="Change"><li><a class ="save" href="#">Lưu</a></li></button>
-    <button class="Change"><li><a class ="them" href="./function/add_store.php">Thêm</a></li></button>
-    <button class="Change"><li><a class ="refresh" href="#">Refresh</a></li></button>
-    </div>
-<table border=1 cellspacing=0 cellpading=0>  
-<t>
-  <th>Mã Đại Lý</th>
-  <th>Tên Đại Lý</th>
-  <th>Loại</th>
-  <th>Địa chỉ</th>
-  <th>Quận</th>
-  <th>Tel</th>
-  <th>Email</th>
-  <th>Ngày Tiếp Nhận</th>
-  <th>Tiền Nợ</th>
-  <th>Thay đổi</th>
-  </t>
-  <?php 
-          while($rows=mysqli_fetch_array($result))
-          {
-        ?>
-        <tr>
-          <td><?php echo $rows['MaDaiLy']; ?></td>
-          <td><?php echo $rows['TenDaiLy']; ?></td>
-          <td><?php echo $rows['Loai']; ?></td>
-          <td><?php echo $rows['DiaChi']; ?></td>
-          <td><?php echo $rows['Quan']; ?></td>
-          <td><?php echo $rows['DienThoai']; ?></td>
-          <td><?php echo $rows['Email']; ?></td>
-          <td><?php echo $rows['NgayTiepNhan']; ?></td>
-          <td><?php echo $rows['TienNo']; ?></td>
-          <td><a class ="button_change" href="./function/edit_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Sửa</a>
-          <a class ="button_change" href="./function/del_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Xoá</a></td>
-           
-        </tr>
-        <?php
-          }
-        ?>
-  </table>  
+    
+      
+      
+      <br><br>
+    </form>
+  </div>
   
 </body>
 
