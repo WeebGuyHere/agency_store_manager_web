@@ -400,8 +400,7 @@ body .pic{
  left: 100px;
 }
 table{
-  margin-left: 10%;
-  margin-top: 3%;
+margin: 0 auto;
  top: 200px;
  left: 100px;
  height:20px;
@@ -414,6 +413,8 @@ table th{
 table th, td {
     padding: 40px;
     border: 1px solid black;
+    text-align: center;
+    
    
 }
 table tr{
