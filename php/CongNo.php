@@ -3,7 +3,7 @@
   if (isset($_SESSION['username']) && ($_SESSION['security_code']) )
   {
     require_once('../lib/connection.php');
-    $query = "SELECT * FROM cacdaily";
+    $query = "SELECT * FROM congno";
     $result = mysqli_query($conn,$query);
   
 ?>
@@ -24,24 +24,24 @@
 </head>
 
 <body>
-  
+
   <main class="custom">
     <section class="second-header"> 
         <nav>
                 <ul class="primary-nav">
                     
-                    <li><a href="../index.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+                    <li><a href="../homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
                     <li><a href="#">Tổ chức</a>
                       <ul class ="menu-dropdown">
                         <li><a href="../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
                         <li><a href="../php/ThemMatHang.php">Quản lý mặt hàng</a></li>
-                        <li><a href="#">Xuất phiếu</a>
-                          <ul class ="menu-dropdown">
-                            <li><a href="../php/PhieuThuTien.php">Phiếu thu tiền</a></li>
-                            <li><a href="../php/Phieuxuathang.php">Phiếu xuất hàng</a></li>
-                            
-                          </li>
-                          </ul></li>
+                        <li><a href="../php/XuatPhieu.php">Xuất phiếu</a>
+                        <ul class ="menu-dropdown">
+              <li><a href="../php/PhieuThuTien.php">Phiếu thu tiền</a></li>
+              <li><a href="../php/Phieuxuathang.php">Phiếu xuất hàng</a></li>
+              
+            </li>
+            </ul></li>
                       </ul></li>
                     
                     <li><a href="#">Báo cáo</a>
@@ -60,68 +60,106 @@
                       <li><a href="https://www.instagram.com/">Instagram</a></li>
                     </ul></li>
                     <li class="search-icon">
-                      <input type="search" placeholder="Tìm kiếm...">
-                      <label class="icon">
-                      <img src="../pic/Icon feather-search.png" alt="Search">
-                      </label>
-                   </li>
-                   <button>
-                   <li class ="login"><a href="../php/signout.php?logout">Đăng xuất</a></li>
-                   </button>
+                       <input type="search" placeholder="Tìm kiếm...">
+                       <label class="icon">
+                       <img src="../pic/Icon feather-search.png" alt="Search">
+                       </label>
+                    </li>
+                    <button>
+                    <li class ="login"><a href="../php/signout.php?logout">Đăng xuất</a></li>
+                    </button>
                 </ul>         
         </nav>   
     </section>
     
     <input type="checkbox" id="check">
-    <label for="check">
-     
-      <i class="fas fa-bars" id="btn" ></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-  <div class="slidebar">
-    
-    <header>Menu</header>
-    <ul>
-      <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
-      <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ Chức</a>
-        <ul class ="menu-dropdown1">
-          <li><a href="../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
-          <li><a href="../php/ThemMatHang.php">Quản lý mặt hàng</a></li>
-          <li><a href="#">Xuất phiếu</a>
+      <label for="check">
+       
+        <i class="fas fa-bars" id="btn" ></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <input type="checkbox" id="check">
+      <label for="check">
+       
+        <i class="fas fa-bars" id="btn" ></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+    <div class="slidebar">
+      
+      <header>Menu</header>
+      <ul>
+        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
+        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ Chức</a>
+          <ul class ="menu-dropdown1">
+            <li><a href="../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
+            <li><a href="../php/ThemMatHang.php">Quản lý mặt hàng</a></li>
+            <li><a href="../php/XuatPhieu.php">Xuất phiếu</a>
             <ul class ="menu-dropdown1">
               <li><a href="../php/PhieuThuTien.php">Phiếu thu tiền</a></li>
               <li><a href="../php/Phieuxuathang.php">Phiếu xuất hàng</a></li>
               
             </li>
-            </ul></li>
-        </ul></li>
-      <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
-        <ul class ="menu-dropdown1">
-          <li><a href="../php/DoanhSo.php">Doanh số</a></li>
-        <li><a href="../php/CongNo.php">Công nợ tháng</a></li>
-        </li></ul></li>
-      <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
-        <ul class ="menu-dropdown1">
-          <li><a href="../php/PhanHoi.php">Phản hồi</a></li>
-          <li><a href="../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul></li>
-      <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
-        <ul class="menu-dropdown1">
-          <li><a href="#">Hotline: 0948232811</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-        </ul></li>
-      
-    </ul>
-  </div>
+            </ul> </li>
+          </ul></li>
+        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
+          <ul class ="menu-dropdown1">
+            <li><a href="../php/DoanhSo.php">Doanh số</a></li>
+          <li><a href="../php/CongNo.php">Công nợ tháng</a></li>
+          </li></ul></li>
+        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
+          <ul class ="menu-dropdown1">
+            <li><a href="../php/PhanHoi.php">Phản hồi</a></li>
+            <li><a href="../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul></li>
+        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
+          <ul class="menu-dropdown1">
+            <li><a href="#">Hotline: 0948232811</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul></li>
+        
+      </ul>
+    </div>
+    
+    </main>
+    <hr style="border: 0">
+    <script>
+      $('.feat-btn').click(function(){
+        $('.menu-dropdown1').toggleClass("show");
+      });
+    </script>
+<div class="ThemTV">
+  <button class="Change"><li><a class ="save" href="#">Lưu</a></li></button>
+    <button class="Change"><li><a class ="them" href="./function/add_store.php">Thêm</a></li></button>
+    <button class="Change"><li><a class ="refresh" href="#">Refresh</a></li></button>
+    </div>
+<table border=1 cellspacing=0 cellpading=0>  
+<t>
+  <th>Mã Đại Lý</th>
+  <th>Tháng</th>
+  <th>Nợ Đầu</th>
+  <th>Phát sinh</th>
+  <th>Nợ cuối</th>
+  <th>Thay đổi</th>
+  </t>
+  <?php 
+          while($rows=mysqli_fetch_array($result))
+          {
+        ?>
+        <tr>
+          <td><?php echo $rows['MaDaiLy']; ?></td>
+          <td><?php echo $rows['Thang']; ?></td>
+          <td><?php echo $rows['NoDau']; ?></td>
+          <td><?php echo $rows['PhatSinh']; ?></td>
+          <td><?php echo $rows['NoCuoi']; ?></td>
+          <td><a class ="button_change" href="./function/edit_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Sửa</a>
+          <a class ="button_change" href="./function/del_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Xoá</a></td>
+           
+        </tr>
+        <?php
+          }
+        ?>
+  </table>  
   
-  </main>
-  <hr style="border: 0">
-  <script>
-    $('.feat-btn').click(function(){
-      $('.menu-dropdown1').toggleClass("show");
-    });
-  </script>
-   
 </body>
 
 </html>
@@ -130,6 +168,12 @@
   }
   else 
   {
-    header("location: ../index.php");
+    ?>
+      <script>
+        if (!alert('You MUST login first!')) {
+          document.location = "./login.php";
+        }
+        </script>
+        <?php
   }
 ?>
