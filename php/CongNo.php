@@ -139,7 +139,6 @@
   <th>Nợ Đầu</th>
   <th>Phát sinh</th>
   <th>Nợ cuối</th>
-  <th>Thay đổi</th>
   </t>
   <?php 
           while($rows=mysqli_fetch_array($result))
@@ -151,9 +150,6 @@
           <td><?php echo $rows['NoDau']; ?></td>
           <td><?php echo $rows['PhatSinh']; ?></td>
           <td><?php echo $rows['NoCuoi']; ?></td>
-          <td><a class ="button_change" href="./function/edit_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Sửa</a>
-          <a class ="button_change" href="./function/del_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Xoá</a></td>
-           
         </tr>
         <?php
           }

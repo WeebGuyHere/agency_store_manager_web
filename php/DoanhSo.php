@@ -138,7 +138,6 @@
   <th>Tháng</th>
   <th>Số Phiếu Xuất</th>
   <th>Tổng Giá Trị</th>
-  <th>Thay đổi </th>
   </t>
   <?php 
           while($rows=mysqli_fetch_array($result))
@@ -148,10 +147,7 @@
           <td><?php echo $rows['MaDaiLy']; ?></td>
           <td><?php echo $rows['Thang']; ?></td>
           <td><?php echo $rows['SoPhieuXuat']; ?></td>
-          <td><?php echo $rows['TongTriGia']; ?></td>
-          <td><a class ="button_change" href="./function/edit_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Sửa</a>
-          <a class ="button_change" href="./function/del_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Xoá</a></td>
-           
+          <td><?php echo $rows['TongTriGia']; ?></td>  
         </tr>
         <?php
           }
