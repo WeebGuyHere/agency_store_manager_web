@@ -33,12 +33,12 @@
                     <li><a href="../homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
                     <li><a href="#">Tổ chức</a>
                       <ul class ="menu-dropdown">
-                        <li><a href="../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
-                        <li><a href="../php/ThemMatHang.php">Quản lý mặt hàng</a></li>
+                        <li><a href="../php/AgencyStore.php">Quản lý các đại lý</a></li>
+                        <li><a href="../php/Addgoods.php">Quản lý mặt hàng</a></li>
                         <li><a href="../php/XuatPhieu.php">Xuất phiếu</a>
                         <ul class ="menu-dropdown">
-              <li><a href="../php/PhieuThuTien.php">Phiếu thu tiền</a></li>
-              <li><a href="../php/Phieuxuathang.php">Phiếu xuất hàng</a></li>
+              <li><a href="../php/Bill.php">Phiếu thu tiền</a></li>
+              <li><a href="../php/DeliveryNote.php">Phiếu xuất hàng</a></li>
               
             </li>
             </ul></li>
@@ -46,13 +46,13 @@
                     
                     <li><a href="#">Báo cáo</a>
                     <ul class ="menu-dropdown">
-                      <li><a href="../php/DoanhSo.php">Doanh số</a></li>
-                    <li><a href="../php/CongNo.php">Công nợ tháng</a></li>
+                      <li><a href="../php/SalesReport.php">Doanh số</a></li>
+                    <li><a href="../php/DebtReport.php">Công nợ tháng</a></li>
                     </li></ul>
                     <li><a href="#">Khách hàng</a>
                       <ul class ="menu-dropdown">
-                    <li><a href="../php/PhanHoi.php">Phản hồi</a></li>
-                    <li><a href="../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul>
+                    <li><a href="../php/Feedback.php">Phản hồi</a></li>
+                    <li><a href="../php/Request.php">Yêu cầu Khác hàng</a></li></li></ul>
                     <li><a href="#">Contact</a>
                     <ul class="menu-dropdown">
                       <li><a href="#">Hotline: 0948232811</a></li>
@@ -91,25 +91,25 @@
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ Chức</a>
           <ul class ="menu-dropdown1">
-            <li><a href="../php/ThemdaiLy.php">Quản lý các đại lý</a></li>
-            <li><a href="../php/ThemMatHang.php">Quản lý mặt hàng</a></li>
+            <li><a href="../php/AgencyStore.php">Quản lý các đại lý</a></li>
+            <li><a href="../php/Addgoods.php">Quản lý mặt hàng</a></li>
             <li><a href="../php/XuatPhieu.php">Xuất phiếu</a>
             <ul class ="menu-dropdown1">
-              <li><a href="../php/PhieuThuTien.php">Phiếu thu tiền</a></li>
-              <li><a href="../php/Phieuxuathang.php">Phiếu xuất hàng</a></li>
+              <li><a href="../php/Bill.php">Phiếu thu tiền</a></li>
+              <li><a href="../php/DeliveryNote.php">Phiếu xuất hàng</a></li>
               
             </li>
             </ul> </li>
           </ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
           <ul class ="menu-dropdown1">
-            <li><a href="../php/DoanhSo.php">Doanh số</a></li>
-          <li><a href="../php/CongNo.php">Công nợ tháng</a></li>
+            <li><a href="../php/SalesReport.php">Doanh số</a></li>
+          <li><a href="../php/DebtReport.php">Công nợ tháng</a></li>
           </li></ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
           <ul class ="menu-dropdown1">
-            <li><a href="../php/PhanHoi.php">Phản hồi</a></li>
-            <li><a href="../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul></li>
+            <li><a href="../php/Feedback.php">Phản hồi</a></li>
+            <li><a href="../php/Request.php">Yêu cầu Khách hàng</a></li></li></ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
           <ul class="menu-dropdown1">
             <li><a href="#">Hotline: 0948232811</a></li>
