@@ -66,8 +66,8 @@
                      </ul></li>
                    <li><a href="#">Báo cáo</a>
                    <ul class ="menu-dropdown">
-                     <li><a href="./php/DoanhSo.php">Doanh số</a></li>
-                   <li><a href="./php/CongNo.php">Công nợ tháng</a></li>
+                     <li><a href="./php/SalesReport.php">Doanh số</a></li>
+                   <li><a href="./php/DebtReport.php">Công nợ tháng</a></li>
                    </li></ul>
                    <li><a href="#">Khách hàng</a>
                      <ul class ="menu-dropdown">
@@ -112,8 +112,8 @@
           </ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
           <ul class ="menu-dropdown1">
-            <li><a href="./php/DoanhSo.php">Doanh số</a></li>
-          <li><a href="./php/CongNo.php">Công nợ tháng</a></li>
+            <li><a href="./php/SalesReport.php">Doanh số</a></li>
+          <li><a href="./php/DebtReport.php">Công nợ tháng</a></li>
           </li></ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
           <ul class ="menu-dropdown1">
