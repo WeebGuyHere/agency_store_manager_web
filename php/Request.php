@@ -52,7 +52,7 @@
                     <li><a href="#">Khách hàng</a>
                       <ul class ="menu-dropdown">
                     <li><a href="../php/PhanHoi.php">Phản hồi</a></li>
-                    <li><a href="../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul>
+                    <li><a href="../php/YeuCau.php">Yêu cầu Khách hàng</a></li></li></ul>
                     <li><a href="#">Contact</a>
                     <ul class="menu-dropdown">
                       <li><a href="#">Hotline: 0948232811</a></li>
@@ -103,7 +103,7 @@
       <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
         <ul class ="menu-dropdown1">
           <li><a href="../php/PhanHoi.php">Phản hồi</a></li>
-          <li><a href="../php/YeuCau.php">Yêu cầu Khác hàng</a></li></li></ul></li>
+          <li><a href="../php/YeuCau.php">Yêu cầu Khách hàng</a></li></li></ul></li>
       <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
         <ul class="menu-dropdown1">
           <li><a href="#">Hotline: 0948232811</a></li>
