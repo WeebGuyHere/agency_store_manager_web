@@ -410,7 +410,7 @@ table{
 }
 table th{
   width: 200px; 
-  background: rgb(8, 255, 222);
+  background: rgb(251, 247, 9);
   
 }
 table th, td {
@@ -434,7 +434,7 @@ table tr{
   display: inline;
   width: 115px;
   height: 25px;
-  background: #000000;
+  background: #f80b0b;
   margin-left: 10px;
   margin-top: 20px;
   margin-bottom: 30px;
