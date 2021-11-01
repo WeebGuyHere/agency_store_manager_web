@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
@@ -127,11 +127,47 @@
         $('.menu-dropdown1').toggleClass("show");
       });
     </script>
-<div class="ThemTV">
-  <button class="Change"><li><a class ="save" href="#">Lưu</a></li></button>
-    <button class="Change"><li><a class ="them" href="./function/add_store.php">Thêm</a></li></button>
-    <button class="Change"><li><a class ="refresh" href="#">Refresh</a></li></button>
-    </div>
+    <div class="container">
+    <div class="row">
+      <article class="col-sm-9">
+        <div class="modal" style="margin-top:5px;" id="myModal">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+             <div class="modal-header" style="height:50px;">
+                 <h2 style="position: relative; bottom:5px; left:270px; ">Thêm đại lý</h2>
+             </div>
+            <div class="modal-body" style="height:170px; background: #ddd;">
+              <div class="row" style="margin: 5px">
+                <div class="form-group col-sm-6">
+                 <input type="text"style="margin-bottom:10px; " placeholder="Mã đại lý" >
+                <input type="text" style="margin-bottom:10px;" placeholder="Tên đại lý">   
+                <input  type="text" style="margin-bottom:10px;" placeholder="Địa chỉ">
+                <input  type="text" style="margin-bottom:10px;" placeholder="Quận">    
+              </div>
+              </div>
+              <div class="form-group col-sm-6" style="position:relative; left:400px; bottom:145px;">
+                <input type="text" style="margin-bottom:10px;" placeholder="Số điện thoại">
+                <input type="text" style="margin-bottom:10px;" placeholder="Email">
+                <input type="text" style="margin-bottom:10px;" placeholder="Tiền nợ">
+                <input type="text" style="margin-bottom:10px;" placeholder="Ngày tiếp nhận">
+              </div>  
+
+         <input type="text" style="position:relative; left:240px; bottom:287px; width:45px;" placeholder="Loại" >
+            </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-primary" >Thêm</button>
+                  <Button class="btn btn-default" data-dismiss="modal">Close</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="position:relative; left:950px; top:30px;">Thêm</button>
+         <button class="btn btn-primary" style="position:relative; left:950px; top:30px;">Lưu</button>
+         <button class="btn btn-primary" style="position:relative; left:950px; top:30px;">Refresh</button>
+      </div>
+</article>           
+</div>
 <table border=1 cellspacing=0 cellpading=0>  
 <t>
   <th>Mã Đại Lý</th>
@@ -169,7 +205,12 @@
   </table>  
   
 </body>
-
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </html>
 
 <?php

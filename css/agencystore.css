@@ -475,22 +475,8 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 .add-store{
   background: silver;
 }
-.add-form{
-  list-style-type: none !important;
-  margin-left: 350px;
-  margin-top: 120px;
-  height:auto;
-  width: auto;
-}
-.add-form2{
-  list-style-type: none !important;
-  margin-left: 840px;
-  margin-top: -230px;
-}
+
 .form-group li{
-  display: inline-block;
-  margin-right: 20px;
-  margin-top: 20px;
   font-family: boroto;
   font-size: 30px;
 }
@@ -506,34 +492,12 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .form-group0{
   position: relative;
-  left: 200px;
+ 
 }
-.input1{
-  margin-left: 35px;
-}
-.input2{
-  margin-left: 57px;
-}
-.input3{
-  margin-left: 46px;
-}
-.input4{
-margin-left: 110px;
-}
-.input5{
-  margin-left: 90px;
-  }
 .type1{
   position: relative;
-  top:-230px;
-  right:280px;
 }
-  .form-group .input6{
-    position: relative;
-    top:-234px;
-    right:280px;
-    width: 55px;
-  }
+
   .type-form{
     background: rgb(236, 220, 220);
     position: relative;

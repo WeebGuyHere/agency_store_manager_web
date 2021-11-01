@@ -4,7 +4,7 @@
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/agencystore.css">
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,7 +132,7 @@
       });
     </script>
    
-   <div id="footer">
+   <div class="footer">
     <ul class="list-inline">
         <li><a href="#">Home</a></li><span>|</span>
         <li><a href="#">About Us</a></li><span>|</span>
