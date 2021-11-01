@@ -42,7 +42,7 @@
                         <li><a href="./php/AgencyStore.php">Quản lý các đại lý</a></li>
                         <li><a href="./php/addgoods.php">Quản lý mặt hàng</a></li>
                         <li><a href="#">Xuất phiếu</a>
-                        <ul class ="menu-dropdown1">
+                        <ul class ="menu-dropdown">
                         <li><a href="./php/Bill.php">Phiếu thu tiền</a></li>
                         <li><a href="./php/DeliveryNote.php">Phiếu xuất hàng</a></li>
                         
@@ -98,7 +98,7 @@
             <li><a href="./php/AgencyStore.php">Quản lý các đại lý</a></li>
             <li><a href="./php/addgoods.php">Quản lý mặt hàng</a></li>
             <li><a href="#">Xuất phiếu</a>
-            <ul class ="menu-dropdown">
+            <ul class ="menu-dropdown1">
                         <li><a href="./php/Bill.php">Phiếu thu tiền</a></li>
                         <li><a href="./php/DeliveryNote.php">Phiếu xuất hàng</a></li>
                         
