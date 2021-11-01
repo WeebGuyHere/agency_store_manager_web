@@ -135,7 +135,7 @@
        
 <table border=1 cellspacing=0 cellpading=0>  
 
-<tr><th colspan="5">QUẢN LÝ CÔNG NỢ HÀNG THÁNG</th></tr>
+
 <t>
 <th>Mã Đại Lý</th>
 <th>Tháng</th>
