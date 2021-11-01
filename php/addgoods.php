@@ -127,6 +127,39 @@
   <tr> <td>Put table here</td></tr> 
   <tr> <td>Put table here</td> </tr>  
   </table>  
+  <div class="container">
+    <div class="row">
+      <article class="col-sm-9">
+        <div class="modal" style="margin-top:5px;" id="myModal">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+             <div class="modal-header" style="height:50px;">
+                 <h2 style="position: relative; bottom:0px; left:70px;">Thông tin mặt hàng</h2>
+             </div>
+            <div class="modal-body" style="height:170px; background: #ddd;">
+              <div class="row" style="margin: 5px">
+                <div class="form-group col-sm-6">
+                 <input type="text"style="margin-bottom:10px; height:40px; " placeholder="Mã mặt hàng" >
+                <input type="text" style="margin-bottom:10px;height:40px;" placeholder="Tên mặt hàng">   
+                <input  type="text" style="margin-bottom:10px;height:40px;" placeholder="Đơn giá">  
+              </div>
+              </div>
+              
+            </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-primary" >Thêm</button>
+                  <Button class="btn btn-default" data-dismiss="modal">Close</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="position:relative; left:900px; bottom:180px;">Thêm</button>
+         <button class="btn btn-primary" style="position:relative; left:900px; bottom:180px;">Lưu</button>
+         <button class="btn btn-primary" style="position:relative; left:900px; bottom: 180px;">Refresh</button>
+      </div>
+</article>           
+</div>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
