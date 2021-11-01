@@ -132,19 +132,23 @@
     <button class="Change"><li><a class ="them" href="./function/add_store.php">Thêm</a></li></button>
     <button class="Change"><li><a class ="refresh" href="#">Refresh</a></li></button>
     </div>
+       
 <table border=1 cellspacing=0 cellpading=0>  
+
+<tr><th colspan="5">QUẢN LÝ CÔNG NỢ HÀNG THÁNG</th></tr>
 <t>
-  <th>Mã Đại Lý</th>
-  <th>Tháng</th>
-  <th>Nợ Đầu</th>
-  <th>Phát sinh</th>
-  <th>Nợ cuối</th>
-  </t>
+<th>Mã Đại Lý</th>
+<th>Tháng</th>
+<th>Nợ Đầu</th>
+<th>Phát sinh</th>
+<th>Nợ cuối</th>
+</t>
   <?php 
           while($rows=mysqli_fetch_array($result))
           {
         ?>
         <tr>
+          
           <td><?php echo $rows['MaDaiLy']; ?></td>
           <td><?php echo $rows['Thang']; ?></td>
           <td><?php echo $rows['NoDau']; ?></td>

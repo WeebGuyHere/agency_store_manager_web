@@ -399,6 +399,7 @@ body .pic{
  top: 170px;
  left: 100px;
 }
+
 table{
     margin-left: 12%;
     margin-top: 5%;
@@ -408,6 +409,7 @@ table{
  overflow-y:auto;
 
 }
+
 table th{
   width: 200px; 
   background: rgb(251, 247, 9);
@@ -416,7 +418,7 @@ table th{
 table th, td {
     padding: 20px;
     border: 1px solid black;
-    text-align: center;
+    
     
    
 }
