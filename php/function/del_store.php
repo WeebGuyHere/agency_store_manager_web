@@ -8,7 +8,7 @@ if (isset ($_SESSION['username']) )
         $del_sql = $conn->prepare("DELETE FROM cacdaily WHERE MaDaiLy = ?"); 
         $del_sql->bind_param("s", $id);
         $del_sql->execute();
-        header("location:../ThemDaiLy.php"); 
+        header("location:../AgencyStore.php"); 
         exit;	 
 }
 else
