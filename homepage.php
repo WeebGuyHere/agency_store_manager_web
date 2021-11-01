@@ -72,8 +72,9 @@
                       <li><a href="./php/SalesReport.php">Doanh số</a></li>
                     <li><a href="./php/DebtReport.php">Công nợ tháng</a></li>
                     </li></ul>
-                    <li><a href="#">Khách hàng</a>
+                    <li><a href="#">Tùy chọn</a>
                       <ul class ="menu-dropdown">
+                      <li><a href="./php/changepassword.php">Đổi mật khẩu</a></li>
                     <li><a href="./php/Feedback.php">Phản hồi</a></li>
                     <li><a href="./php/Request.php">Yêu cầu Khác hàng</a></li></li></ul>
                   
