@@ -408,9 +408,12 @@ table{
  overflow-y:auto;
 
 }
+
 table th{
-  width: 150px; 
+  width: 200px; 
   background: rgb(253, 234, 60);
+  
+
   
 }
 table th, td {
