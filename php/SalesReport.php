@@ -133,7 +133,7 @@
     <button class="Change"><li><a class ="refresh" href="#">Refresh</a></li></button>
     </div>
 <table border=1 cellspacing=0 cellpading=0>  
-
+<tr><th colspan="4">QUẢN LÝ DOANH SỐ</th></tr>
 <t>
   <th>Mã Đại Lý</th>
   <th>Tháng</th>
