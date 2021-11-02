@@ -175,9 +175,9 @@
               </div>
             </div>
           </div>
-         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="position:relative; left:900px; bottom:400px;">Thêm</button>
-         <button class="btn btn-primary" style="position:relative; left:900px; bottom:400px;">Lưu</button>
-         <button class="btn btn-primary" style="position:relative; left:900px; bottom: 400px;">Refresh</button>
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="position:relative; left:900px; bottom:700px;">Thêm</button>
+         <button class="btn btn-primary" style="position:relative; left:900px; bottom:700px;">Lưu</button>
+         <button class="btn btn-primary" style="position:relative; left:900px; bottom: 700px;">Refresh</button>
       </div>
 </article>           
 </div>
