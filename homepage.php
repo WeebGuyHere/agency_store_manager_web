@@ -1,155 +1,392 @@
 <?php
+//admin login
   session_start();
-  if (isset($_SESSION['username']) && ($_SESSION['security_code']) )
+  if (isset($_SESSION['username']) && $_SESSION['level'] == 1 && ($_SESSION['security_code']) )
   {
     
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-   
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agency Store Manager - Admin System</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
 
-<body>
- 
-<body>
- 
- <img class="pic2" src="./pic/5.jpg">
- 
- <img class="pic3" src="./pic/2.jpg">
- <li class ="QL">Trang web quản lý đại lý cho các doanh</li>
-  <li class ="QL2"> nghiệp vừa và nhỏ</li>
-  <li class="QL3">Trang web giúp quản lý các đại lý một cách khoa học và hiệu quả</li>
-  <button class="button">
-    <li class="QL4"><a herf="#">Đăng kí làm thành viên</a><span><ion-icon class="icoc" name="arrow-forward-circle-outline"></ion-icon></span></li>
-  </button>
-  <li class="ND1"></li>
- <main class="custom">
+<body id="page-top">
 
-</li>
-   <section class="second-header"> 
-       <nav>
-               <ul class="primary-nav">
-                 <li>  
-                   <li><a href="./index.php"><span><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
-                   <li><a href="#">Admin</a>
-                   <ul class="menu-dropdown">
-                     <li><a href="#">Quản trị tài khoản</a></li>
-                     <li><a href="#">Facebook</a></li>
-                     <li><a href="#">Instagram</a></li>
-                   </ul></li>
-                   <li><a href="#">Tổ chức</a>
-                     <ul class ="menu-dropdown">
-                     <li><a href="./php/AgencyStore.php">Quản lý các đại lý</a></li>
-                        <li><a href="./php/addgoods.php">Quản lý mặt hàng</a></li>
-                        <li><a href="#">Xuất phiếu</a>
-                        <ul class ="menu-dropdown">
-                        <li><a href="./php/Bill.php">Phiếu thu tiền</a></li>
-                        <li><a href="./php/DeliveryNote.php">Phiếu xuất hàng</a></li>
-                        
-                      </li>
-                      </ul>
-                      </li>
-                      </ul></li>
-                      
-             
-                    <li><a href="#">Báo cáo</a>
-                    <ul class ="menu-dropdown">
-                      <li><a href="./php/SalesReport.php">Doanh số</a></li>
-                    <li><a href="./php/DebtReport.php">Công nợ tháng</a></li>
-                    </li></ul>
-                    <li><a href="#">Tùy chọn</a>
-                      <ul class ="menu-dropdown">
-                      <li><a href="./php/changepassword.php">Đổi mật khẩu</a></li>
-                    <li><a href="./php/Feedback.php">Phản hồi</a></li>
-                    <li><a href="./php/Request.php">Yêu cầu Khách hàng</a></li></li></ul>
-                  
-                   <li class="search-icon">
-                      <input type="search" placeholder="Tìm kiếm...">
-                      <label class="icon">
-                      <img src="./pic/Icon feather-search.png" alt="Search">
-                      </label>
-                   </li>
-                    <button>
-                    <li class ="login"><a href="./php/signout.php?logout">Đăng xuất</a></li>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-store"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Store Manager <sup></sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="./homepage.php">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>HomePage</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Menu Tổ chức -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-store"></i>
+                    <span>Tổ chức</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./php/AgencyStore.php">Thông tin các đại lý</a>
+                        <a class="collapse-item" href="./php/Addgoods.php">Thông tin các mặt hàng</a>
+                        <a class="collapse-item" href="./php/Bill.php">Thu tiền</a>
+                        <a class="collapse-item" href="./php/DeliveryNote.php">Xuất hàng</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-file-alt"></i>
+                    <span>Báo cáo</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./php/SalesReport.php">Doanh số tháng</a>
+                        <a class="collapse-item" href="./php/DebtReport.php">Công nợ tháng</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-users-cog"></i>
+                    <span>For Adminstrator</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./php/usermanger.php">Quản lý người dùng</a>
+                        <a class="collapse-item" href="./php/AgentOrganization.php">Quy định số đại lý</a>
+                        <a class="collapse-item" href="./php/TypeStore.php">Các loại đại lý</a>
+
+                    </div>
+                </div>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="#aboutus" data-toggle="modal">
+                    <i class="fas fa-fw fa-address-book"></i>
+                    <span>Về chúng tôi</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
                     </button>
-                </ul>         
-        </nav>  
-         
-    </section>
-    <input type="checkbox" id="check">
-      <label for="check">
-       
-        <i class="fas fa-bars" id="btn" ></i>
-        <i class="fas fa-times" id="cancel"></i>
-      </label>
-    <div class="slidebar">
-      
-      <header>Menu</header>
-      <ul>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ Chức</a>
-          <ul class ="menu-dropdown1">
-          <li><a href="./php/AgencyStore.php">Quản lý các đại lý</a></li>
-            <li><a href="./php/addgoods.php">Quản lý mặt hàng</a></li>
-            <li><a href="#">Xuất phiếu</a>
-            <ul class ="menu-dropdown1">
-                        <li><a href="./php/Bill.php">Phiếu thu tiền</a></li>
-                        <li><a href="./php/DeliveryNote.php">Phiếu xuất hàng</a></li>
-                        
-                      </li>
-                      </ul></li>
-          </ul></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
-          <ul class ="menu-dropdown1">
-            <li><a href="./php/SalesReaport.php">Doanh số</a></li>
-          <li><a href="./php/DebtReport.php">Công nợ tháng</a></li>
-          </li></ul></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
-          <ul class ="menu-dropdown1">
-            <li><a href="./php/Feedback.php">Phản hồi</a></li>
-            <li><a href="./php/Request.php">Yêu cầu Khác hàng</a></li></li></ul></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
-          <ul class="menu-dropdown1">
-            <li><a href="#">Hotline: 0948232811</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul></li>
-        
-      </ul>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Hello, ".$_SESSION['username']; ?></span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="./php/Changepassword.php">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Change Password
+                                </a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Danh sách các tính năng của quản trị viên</h1>
+                    <br>
+                    <!--Line 01-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 40rem;">
+                            <div class="card-header bg-primary">Tính năng</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Thêm các đại lý</h5>
+                                    <p class="card-text">Có thể thêm, chỉnh sửa, xoá các đại lý</p>
+                                    <a href="./php/AgencyStore.php" class="btn btn-light">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-sm-6">
+                                <div class="card text-white bg-secondary mb-3" style="max-width: 40rem;">
+                                <div class="card-header bg-secondary">Tính năng</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Thêm thông tin các mặt hàng</h5>
+                                        <p class="card-text">Có thể thêm, chỉnh sửa, xoá các mặt hàng đang có</p>
+                                        <a href="./php/addgoods.php" class="btn btn-light">Go</a>
+                                    </div>
+                                </div>
+                            </div>        
+                    </div>
+                    <br><br>
+                    <!--Line 02-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card text-white bg-success mb-3" style="max-width: 40rem;">
+                            <div class="card-header bg-success">Tính năng</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Báo cáo doanh số tháng</h5>
+                                    <p class="card-text">Lấy báo cáo doanh số đại lý theo tháng.</p>
+                                    <a href="./php/SalesReport.php" class="btn btn-light">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-sm-6">
+                                <div class="card text-white bg-danger mb-3" style="max-width: 40rem;">
+                                <div class="card-header bg-danger">Tính năng</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Báo cáo công nợ tháng</h5>
+                                        <p class="card-text">Lấy báo cáo nợ cuối đại lý theo tháng</p>
+                                        <a href="./php/DebtReport.php" class="btn btn-light">Go</a>
+                                    </div>
+                                </div>
+                            </div>        
+                    </div>
+                    <br><br>
+                    <!--Line 03-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card text-white bg-warning mb-3" style="max-width: 40rem;">
+                            <div class="card-header bg-warning">Tính năng</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Quản lý người dùng</h5>
+                                    <p class="card-text">Có thể thêm, phân cấp tài khoản (Adminstrator và Member) và đặt lại mật khẩu mặc định cho tài khoản</p>
+                                    <a href="./php/usermanger.php" class="btn btn-light">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-sm-6">
+                                <div class="card text-white bg-info mb-3" style="max-width: 40rem;">
+                                <div class="card-header bg-info">Tính năng</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quy định số loại đại lý</h5>
+                                        <p class="card-text">Thiết lập các thông số: "Số loại đại lý tối đa" và "Số đại lý tối đa trên mỗi loại"</p>
+                                        <a href="./php/AgentOrganization.php" class="btn btn-light">Go</a>
+                                    </div>
+                                </div>
+                            </div>        
+                    </div>
+                    <br><br>
+                    <!--Line 04-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card text-white bg-dark mb-3" style="max-width: 40rem;">
+                            <div class="card-header bg-dark">Tính năng</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Thêm các loại đại lý</h5>
+                                    <p class="card-text">Có thể thêm, chỉnh sửa, xoá và đặt nợ tối đa cho các loại đại lý</p>
+                                    <a href="./php/TypeStore.php" class="btn btn-light">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-sm-6">
+                                <div class="card text-white bg-primary mb-3" style="max-width: 40rem;">
+                                <div class="card-header bg-primary">Tính năng</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tạo phiếu xuất hàng</h5>
+                                        <p class="card-text">Có thể thêm, chỉnh sửa, xoá các phiếu xuất hàng</p>
+                                        <a href="./php/DeliveryNote.php" class="btn btn-light">Go</a>
+                                    </div>
+                                </div>
+                            </div>        
+                    </div>
+                    <br><br>
+                    <!--Line 03-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 40rem;">
+                            <div class="card-header bg-secondary">Tính năng</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Tạo phiếu thu tiền</h5>
+                                    <p class="card-text">Có thể thêm, chỉnh sửa, xoá các phiếu thu tiền</p>
+                                    <a href="./php/Bill.php" class="btn btn-light">Go</a>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <!-- /.container-fluid --> 
+            
+
+            </div>
+            <!-- End of Main Content -->
+             <!-- Footer -->
+             <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span> Agency Store Manager Web Version</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+
     </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
     
-    </main>
-    <hr style="border: 0">
-    <script>
-      $('.feat-btn').click(function(){
-        $('.menu-dropdown1').toggleClass("show");
-      });
-    </script>
-   <div id="footer">
-    <ul class="list-inline">
-        <li><a href="#">Home</a></li><span>|</span>
-        <li><a href="#">About Us</a></li><span>|</span>
-        <li><a href="#">Contact Us</a></li><span>|</span>
-        <li><a href="#">Feedback</a></li>
-        
-    </ul>
-</div>
-</div>
+    <!--Modal about team-->
+    <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Về chúng tôi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-dark">
+               <h5 class="card-title text-dark">Trang web quản lý các đại lý</h5>
+               <h5 class="card-title text-dark">Các thành viên: </h5>
+               <p>1. Ngô Thành Long</p>
+               <p>2. Đỗ Bá Sơn</p>
+               <p>3. Trịnh Tiến Anh</p>
+               <p>4. Vũ Quốc Hưng</p>
+               <p>5. Nguyễn Ngọc Hoàng Hà</p>
+               <br>
+               <h5 class="card-title text-dark">Các khuôn mẫu CSS, template và thư viện sử dụng</h5>
+               <p>1. Khuôn mẫu CSS Bootstrap: <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+               <p>2. Bootstrap DatePicker: <a href="https://github.com/uxsolutions/bootstrap-datepicker">https://github.com/uxsolutions/bootstrap-datepicker</a></p>
+               <p>3. DataTables: <a href="https://datatables.net/">https://datatables.net/</a></p>
+               <p>4. Fontawesome phiên bản free</p>
+               <p>5. jQuery và jQuery-easing: <a href="https://jquery.com/">https://jquery.com/</a></p>
+               <p>6. Start Bootstrap Template: <a href="https://startbootstrap.com/">https://startbootstrap.com/</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="./php/signout.php?logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
 </body>
 
 </html>
@@ -157,6 +394,7 @@
   }
   else 
   {
-    header("location: ./index.php");
+    header('Location: ./index.php');
+    exit;
   }
 ?>

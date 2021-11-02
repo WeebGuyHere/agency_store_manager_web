@@ -1,229 +1,439 @@
 <?php
   session_start();
-  if (isset($_SESSION['username']) && ($_SESSION['security_code']) )
+  if (isset($_SESSION['username']) && $_SESSION['level'] == 1 && ($_SESSION['security_code']) )
   {
     require_once('../lib/connection.php');
     $query = "SELECT * FROM cacdaily";
     $result = mysqli_query($conn,$query);
   
+    //get list type-store
+    $list_goods = "SELECT * FROM loaidaily";
+    $list = mysqli_query($conn,$list_goods);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/agencystore.css">
-    <!--icon-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agency Store Manager - Admin System</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!--Boostrap DatePicker-->
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap-datepicker/bootstrap-datepicker.css" >
+
 </head>
 
-<body>
+<body id="page-top">
 
-  <main class="custom">
-    <section class="second-header"> 
-        <nav>
-                <ul class="primary-nav">
-                    
-                    <li><a href="../homepage.php"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
-                    <li><a href="#">Tổ chức</a>
-                    <ul class ="menu-dropdown">
-                        <li><a href="../php/AgencyStore.php">Quản lý các đại lý</a></li>
-                        <li><a href="../php/addgoods.php">Quản lý mặt hàng</a></li>
-                        <li><a href="#">Xuất phiếu</a>
-                          <ul class ="menu-dropdown">
-                            <li><a href="../php/Bill.php">Phiếu thu tiền</a></li>
-                            <li><a href="../php/DeliveryNote.php">Phiếu xuất hàng</a></li>
-                            
-                          </li>
-                          </ul></li>
-                      </ul></li>
-                    
-                    <li><a href="#">Báo cáo</a>
-                    <ul class ="menu-dropdown">
-                      <li><a href="../php/SalesReport.php">Doanh số</a></li>
-                    <li><a href="../php/DebtReport.php">Công nợ tháng</a></li>
-                    </li></ul>
-                    <li><a href="#">Tùy chọn</a>
-                      <ul class ="menu-dropdown">
-                      <li><a href="./php/changepassword.php">Đổi mật khẩu</a></li>
-                    <li><a href="./php/Feedback.php">Phản hồi</a></li>
-                    <li><a href="./php/Request.php">Yêu cầu Khác hàng</a></li></li></ul>
-                    <li><a href="#">Contact</a>
-                    <ul class="menu-dropdown">
-                      <li><a href="#">Hotline: 0948232811</a></li>
-                      <li><a href="https://vi-vn.facebook.com/">Facebook</a></li>
-                      <li><a href="https://www.instagram.com/">Instagram</a></li>
-                    </ul></li>
-                    <li class="search-icon">
-                       <input type="search" placeholder="Tìm kiếm...">
-                       <label class="icon">
-                       <img src="../pic/Icon feather-search.png" alt="Search">
-                       </label>
-                    </li>
-                    <button>
-                    <li class ="login"><a href="../php/signout.php?logout">Đăng xuất</a></li>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-store"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Store Manager <sup></sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="../homepage.php">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>HomePage</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Menu Tổ chức -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-store"></i>
+                    <span>Tổ chức</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./AgencyStore.php">Thông tin các đại lý</a>
+                        <a class="collapse-item" href="./Addgoods.php">Thông tin các mặt hàng</a>
+                        <a class="collapse-item" href="./Bill.php">Thu tiền</a>
+                        <a class="collapse-item" href="./DeliveryNote.php">Xuất hàng</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-file-alt"></i>
+                    <span>Báo cáo</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./SalesReport.php">Doanh số tháng</a>
+                        <a class="collapse-item" href="./DebtReport.php">Công nợ tháng</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-users-cog"></i>
+                    <span>For Adminstrator</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./usermanger.php">Quản lý người dùng</a>
+                        <a class="collapse-item" href="./AgentOrganization.php">Quy định số đại lý</a>
+                        <a class="collapse-item" href="./TypeStore.php">Các loại đại lý</a>
+
+                    </div>
+                </div>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="#aboutus" data-toggle="modal">
+                    <i class="fas fa-fw fa-address-book"></i>
+                    <span>Về chúng tôi</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
                     </button>
-                </ul>         
-        </nav>   
-    </section>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Hello, ".$_SESSION['username']; ?></span>
+                                <img class="img-profile rounded-circle"
+                                    src="../img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="./Changepassword.php">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Change Password
+                                </a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Danh sách các đại lý</h1>
+                    <br>
+
+                    <!-- DataTales Store -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                          <a href="./AgencyStore.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Refresh</a>
+                          <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#AddModal">Add</button>  
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                        <th>Mã Đại Lý</th>
+                                        <th>Tên Đại Lý</th>
+                                        <th>Loại</th>
+                                        <th>Địa chỉ</th>
+                                        <th>Quận</th>
+                                        <th>Tel</th>
+                                        <th>Email</th>
+                                        <th>Ngày Tiếp Nhận</th>
+                                        <th>Tiền Nợ</th>
+                                        <th>Thay đổi</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        
+                                    </tfoot>
+                                    <tbody>
+                                    <?php 
+                                      while($rows=mysqli_fetch_array($result))
+                                      {
+                                    ?>
+                                    <tr>
+                                      <td><?php echo $rows['MaDaiLy']; ?></td>
+                                      <td><?php echo $rows['TenDaiLy']; ?></td>
+                                      <td><?php echo $rows['Loai']; ?></td>
+                                      <td><?php echo $rows['DiaChi']; ?></td>
+                                      <td><?php echo $rows['Quan']; ?></td>
+                                      <td><?php echo $rows['DienThoai']; ?></td>
+                                      <td><?php echo $rows['Email']; ?></td>
+                                      <td><?php echo $rows['NgayTiepNhan']; ?></td>
+                                      <td><?php echo $rows['TienNo']; ?></td>
+                                      <td><a href="./function/edit_store.php?ID=<?php echo $rows['MaDaiLy']; ?>" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Sửa</a>                                        
+                                      <a href="./function/del_store.php?ID=<?php echo $rows['MaDaiLy']; ?>" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Xoá</a>                                      
+                                    </tr>
+                                    <?php
+                                      }
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid --> 
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span> Agency Store Manager Web Version</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!--============================================================================================================-->
     
-    <input type="checkbox" id="check">
-      <label for="check">
-       
-        <i class="fas fa-bars" id="btn" ></i>
-        <i class="fas fa-times" id="cancel"></i>
-      </label>
-      <input type="checkbox" id="check">
-      <label for="check">
-       
-        <i class="fas fa-bars" id="btn" ></i>
-        <i class="fas fa-times" id="cancel"></i>
-      </label>
-    <div class="slidebar">
-      
-      <header>Menu</header>
-      <ul>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ Chức</a>
-          <ul class ="menu-dropdown1">
-          <li><a href="../php/AgencyStore.php">Quản lý các đại lý</a></li>
-            <li><a href="../php/addgoods.php">Quản lý mặt hàng</a></li>
-            <li><a href="#">Xuất phiếu</a>
-            <ul class ="menu-dropdown">
-                        <li><a href="../php/Bill.php">Phiếu thu tiền</a></li>
-                        <li><a href="../php/DeliveryNote.php">Phiếu xuất hàng</a></li>
-                        
-                      </li>
-                      </ul></li>
-          </ul></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
-          <ul class ="menu-dropdown1">
-            <li><a href="../php/SalesReaport.php">Doanh số</a></li>
-          <li><a href="../php/DebtReport.php">Công nợ tháng</a></li>
-          </li></ul></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
-          <ul class ="menu-dropdown1">
-            <li><a href="../php/Feedback.php">Phản hồi</a></li>
-            <li><a href="../php/Request.php">Yêu cầu Khác hàng</a></li></li></ul></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
-          <ul class="menu-dropdown1">
-            <li><a href="#">Hotline: 0948232811</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul></li>
-        
-      </ul>
+    <!-- Add Store Modal-->
+    <div class="modal fade" id="AddModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thêm thông tin đại lý</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                <form action="./function/add_store.php" method="POST">
+                <div class="form-group">
+                    <input type="text" name="idstore" class="form-control" placeholder="Nhập mã đại lý" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="namestore" class="form-control" placeholder="Nhập tên đại lý" required>
+                  </div>
+                  <div class="form-group">
+                    <select class="form-control" name="type" required>
+                    <option value="">Chọn mã đại lý</option>
+                    <?php 
+                        while($data=mysqli_fetch_array($list))
+                        {
+                    ?>
+                        <option value="<?php echo $data['Loai']; ?>"><?php echo $data['Loai']; ?></option>
+                    <?php
+                        }
+                    ?>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="addr" class="form-control" placeholder="Nhập địa chỉ" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="district" class="form-control" placeholder="Nhập quận" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="tel" class="form-control" placeholder="Nhập số điện thoại" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="email" class="form-control" placeholder="Nhập email" required>
+                  </div>
+                  <div class="form-group">
+                  <div class="dates">
+                        <input type="text" name="date" id="date" class="form-control" placeholder="YYYY-MM-DD" autocomplete="off"  required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="debt" class="form-control" placeholder="Số tiền nợ" required>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button type="submit" name="Add" class="btn btn-primary">Thêm</button>
+                </div>
+                </form>
+                </div>
+                
+            </div>
+        </div>
     </div>
     
-    </main>
-    <hr style="border: 0">
-    <script>
-      $('.feat-btn').click(function(){
-        $('.menu-dropdown1').toggleClass("show");
-      });
-    </script>
-    <div class="container">
-    <div class="row">
-      <article class="col-sm-9">
-        <div class="modal" style="margin-top:5px;" id="myModal">
-          <div class="modal-dialog modal-lg">
+    
+
+    <!--Modal about team-->
+    <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-             <div class="modal-header" style="height:50px;">
-                 <h2 style="position: relative; bottom:5px; left:270px; ">Thêm đại lý</h2>
-             </div>
-            <div class="modal-body" style="height:170px; background: #ddd;">
-              <div class="row" style="margin: 5px">
-                <div class="form-group col-sm-6">
-                 <input type="text"style="margin-bottom:10px; " placeholder="Mã đại lý" >
-                <input type="text" style="margin-bottom:10px;" placeholder="Tên đại lý">   
-                <input  type="text" style="margin-bottom:10px;" placeholder="Địa chỉ">
-                <input  type="text" style="margin-bottom:10px;" placeholder="Quận">    
-              </div>
-              </div>
-              <div class="form-group col-sm-6" style="position:relative; left:400px; bottom:145px;">
-                <input type="text" style="margin-bottom:10px;" placeholder="Số điện thoại">
-                <input type="text" style="margin-bottom:10px;" placeholder="Email">
-                <input type="text" style="margin-bottom:10px;" placeholder="Tiền nợ">
-                <input type="text" style="margin-bottom:10px;" placeholder="Ngày tiếp nhận">
-              </div>  
-
-         <input type="text" style="position:relative; left:240px; bottom:287px; width:45px;" placeholder="Loại" >
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Về chúng tôi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-              <div class="modal-footer">
-              <button type="button" class="btn btn-primary" >Thêm</button>
-                  <Button class="btn btn-default" data-dismiss="modal">Close</button>
-                  
+            <div class="modal-body text-dark">
+               <h5 class="card-title text-dark">Trang web quản lý các đại lý</h5>
+               <h5 class="card-title text-dark">Các thành viên: </h5>
+               <p>1. Ngô Thành Long</p>
+               <p>2. Đỗ Bá Sơn</p>
+               <p>3. Trịnh Tiến Anh</p>
+               <p>4. Vũ Quốc Hưng</p>
+               <p>5. Nguyễn Ngọc Hoàng Hà</p>
+               <br>
+               <h5 class="card-title text-dark">Các khuôn mẫu CSS, template và thư viện sử dụng</h5>
+               <p>1. Khuôn mẫu CSS Bootstrap: <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+               <p>2. Bootstrap DatePicker: <a href="https://github.com/uxsolutions/bootstrap-datepicker">https://github.com/uxsolutions/bootstrap-datepicker</a></p>
+               <p>3. DataTables: <a href="https://datatables.net/">https://datatables.net/</a></p>
+               <p>4. Fontawesome phiên bản free</p>
+               <p>5. jQuery và jQuery-easing: <a href="https://jquery.com/">https://jquery.com/</a></p>
+               <p>6. Start Bootstrap Template: <a href="https://startbootstrap.com/">https://startbootstrap.com/</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
-              </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="./signout.php?logout">Logout</a>
+                </div>
             </div>
-          </div>
-         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="position:relative; left:950px; top:30px;">Thêm</button>
-         <button class="btn btn-primary" style="position:relative; left:950px; top:30px;">Lưu</button>
-         <button class="btn btn-primary" style="position:relative; left:950px; top:30px;">Refresh</button>
-      </div>
-</article>           
-</div>
-<table border=1 cellspacing=0 cellpading=0>  
-<t>
-  <th>Mã Đại Lý</th>
-  <th>Tên Đại Lý</th>
-  <th>Loại</th>
-  <th>Địa chỉ</th>
-  <th>Quận</th>
-  <th>Tel</th>
-  <th>Email</th>
-  <th>Ngày Tiếp Nhận</th>
-  <th>Tiền Nợ</th>
-  <th>Thay đổi</th>
-  </t>
-  <?php 
-          while($rows=mysqli_fetch_array($result))
-          {
-        ?>
-        <tr>
-          <td><?php echo $rows['MaDaiLy']; ?></td>
-          <td><?php echo $rows['TenDaiLy']; ?></td>
-          <td><?php echo $rows['Loai']; ?></td>
-          <td><?php echo $rows['DiaChi']; ?></td>
-          <td><?php echo $rows['Quan']; ?></td>
-          <td><?php echo $rows['DienThoai']; ?></td>
-          <td><?php echo $rows['Email']; ?></td>
-          <td><?php echo $rows['NgayTiepNhan']; ?></td>
-          <td><?php echo $rows['TienNo']; ?></td>
-          <td><a class ="button_change" href="./function/edit_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Sửa</a>
-          <a class ="button_change" href="./function/del_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Xoá</a></td>
-           
-        </tr>
-        <?php
-          }
-        ?>
-  </table>  
-  
-</body>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</html>
+        </div>
+    </div>
+    <!--============================================================================================================-->
 
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+
+    <!--Popper JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Page level plugins -->
+    <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+     
+    <!--Boostrap DatePicker-->
+    <script type="text/javascript" src="../vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script>
+			$(function() {
+			$('.dates #date').datepicker({
+				'format': 'yyyy-mm-dd',
+				'autoclose': true
+			});
+		});
+	</script>
+    <!-- Page level custom scripts -->
+    <script>
+    $(document).ready(function() {
+    $('#dataTable').DataTable();
+    });
+    </script>
+    
+</html>
 <?php
   }
   else 
   {
-    ?>
-      <script>
-        if (!alert('You MUST login first!')) {
-          document.location = "./login.php";
-        }
-        </script>
-        <?php
+    header('Location: ../index.php');
+    exit;
   }
 ?>

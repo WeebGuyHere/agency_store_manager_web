@@ -1,145 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/agencystore.css">
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agency Store Manager</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Agency Store Manager</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.php">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#loginmodal" data-bs-toggle="modal">Đại lý</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#loginmodal" data-bs-toggle="modal">Báo cáo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#aboutteam" data-bs-toggle="modal">Về Team</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-<body>
- 
-  <img class="pic2" src="./pic/5.jpg">
-  
-  <img class="pic3" src="./pic/2.jpg">
-  <li class ="QL">Trang web quản lý đại lý cho các doanh</li>
-   <li class ="QL2"> nghiệp vừa và nhỏ</li>
-   <li class="QL3">Trang web giúp quản lý các đại lý một cách khoa học và hiệu quả</li>
-   <button class="button">
-     <li class="QL4"><a herf="#">Đăng kí làm thành viên</a><span><ion-icon class="icoc" name="arrow-forward-circle-outline"></ion-icon></span></li>
-   </button>
-   <li class="ND1"></li>
-  <main class="custom">
- 
-</li>
-    <section class="second-header"> 
-        <nav>
-                <ul class="primary-nav">
-                  <li>  
-                    <li><a href="./index.php"><span><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
-                    <li><a href="#">Tổ chức</a>
-                      <ul class ="menu-dropdown">
-                        <li><a href="./php/AgencyStore.php">Quản lý các đại lý</a></li>
-                        <li><a href="./php/addgoods.php">Quản lý mặt hàng</a></li>
-                        <li><a href="#">Xuất phiếu</a>
-                        <ul class ="menu-dropdown">
-                        <li><a href="./php/Bill.php">Phiếu thu tiền</a></li>
-                        <li><a href="./php/DeliveryNote.php">Phiếu xuất hàng</a></li>
-                        
-                      </li>
-                      </ul>
-                      </li>
-                      </ul></li>
-                      
-             
-                    <li><a href="#">Báo cáo</a>
-                    <ul class ="menu-dropdown">
-                      <li><a href="./php/SalesReport.php">Doanh số</a></li>
-                    <li><a href="./php/DebtReport.php">Công nợ tháng</a></li>
-                    </li></ul>
-                    <li><a href="#">Khách hàng</a>
-                      <ul class ="menu-dropdown">
-                    <li><a href="./php/Feedback.php">Phản hồi</a></li>
-                    <li><a href="./php/Request.php">Yêu cầu Khách hàng</a></li></li></ul>
-                    <li><a href="#">Contact</a>
-                    <ul class="menu-dropdown">
-                      <li><a href="#">Hotline: 0948232811</a></li>
-                      <li><a href="https://vi-vn.facebook.com/">Facebook</a></li>
-                      <li><a href="https://www.instagram.com/">Instagram</a></li>
-                    </ul></li>
-                    <li class="search-icon">
-                       <input type="search" placeholder="Tìm kiếm...">
-                       <label class="icon">
-                       <img src="./pic/Icon feather-search.png" alt="Search">
-                       </label>
-                    </li>
-                    <button><li class ="login"><a href="./php/login.php">Đăng nhập</a></li>
-                    </button>
-</li>
-                    
-                </ul>         
-        </nav>  
-       
-    </section>
-    
-    <input type="checkbox" id="check">
-      <label for="check">
-       
-        <i class="fas fa-bars" id="btn" ></i>
-        <i class="fas fa-times" id="cancel"></i>
-      </label>
-    <div class="slidebar">
-      
-      <header>Menu</header>
-      <ul>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="briefcase-outline"></ion-icon></span>Tổ Chức</a>
-          <ul class ="menu-dropdown1">
-            <li><a href="./php/AgencyStore.php">Quản lý các đại lý</a></li>
-            <li><a href="./php/addgoods.php">Quản lý mặt hàng</a></li>
-            <li><a href="#">Xuất phiếu</a>
-            <ul class ="menu-dropdown1">
-                        <li><a href="./php/Bill.php">Phiếu thu tiền</a></li>
-                        <li><a href="./php/DeliveryNote.php">Phiếu xuất hàng</a></li>
-                        
-                      </li>
-                      </ul></li>
-          </ul></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="warning-outline"></ion-icon></span>Báo Cáo</a>
-          <ul class ="menu-dropdown1">
-            <li><a href="./php/SalesReaport.php">Doanh số</a></li>
-          <li><a href="./php/DebtReport.php">Công nợ tháng</a></li>
-          </li></ul></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
-          <ul class ="menu-dropdown1">
-            <li><a href="./php/Feedback.php">Phản hồi</a></li>
-            <li><a href="./php/Request.php">Yêu cầu Khác hàng</a></li></li></ul></li>
-        <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
-          <ul class="menu-dropdown1">
-            <li><a href="#">Hotline: 0948232811</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul></li>
-        
-      </ul>
-    </div>
-    
-    </main>
-    <hr style="border: 0">
-    <script>
-      $('.feat-btn').click(function(){
-        $('.menu-dropdown1').toggleClass("show");
-      });
-    </script>
-   
-   <div class="footer">
-    <ul class="list-inline">
-        <li><a href="#">Home</a></li><span>|</span>
-        <li><a href="#">About Us</a></li><span>|</span>
-        <li><a href="#">Contact Us</a></li><span>|</span>
-        <li><a href="#">Feedback</a></li>
-        </ul>
-     </div>
-</body>
 
+        <!--Modal request login first-->
+        <div class="modal fade" id="loginmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agency Store Manager</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <p>Bạn cần đặng nhập để truy cập</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="./php/login.php" class="btn btn-primary" role="button" aria-disabled="true">Login</a>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!--Modal about team-->
+        <div class="modal fade" id="aboutteam" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agency Store Manager</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <p>Trang web quản lý các đại lý</p>
+               <p>Các thành viên: </p>
+               <p>1. Ngô Thành Long</p>
+               <p>2. Đỗ Bá Sơn</p>
+               <p>3. Trịnh Tiến Anh</p>
+               <p>4. Vũ Quốc Hưng</p>
+               <p>5. Nguyễn Ngọc Hoàng Hà</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Agency Store Manager</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Web quản lý các đại lý cho doanh nghiệp vừa và nhỏ</h2>
+                        <a class="btn btn-primary" href="./php/login.php">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Agency Store Manager Web Version</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>
