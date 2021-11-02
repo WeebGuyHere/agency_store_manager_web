@@ -50,10 +50,11 @@
                       <li><a href="../php/SalesReport.php">Doanh số</a></li>
                     <li><a href="../php/DebtReport.php">Công nợ tháng</a></li>
                     </li></ul>
-                    <li><a href="#">Khách hàng</a>
+                    <li><a href="#">Tùy chọn</a>
                       <ul class ="menu-dropdown">
-                    <li><a href="../php/Feedback.php">Phản hồi</a></li>
-                    <li><a href="../php/Request.php">Yêu cầu Khác hàng</a></li></li></ul>
+                      <li><a href="./php/changepassword.php">Đổi mật khẩu</a></li>
+                    <li><a href="./php/Feedback.php">Phản hồi</a></li>
+                    <li><a href="./php/Request.php">Yêu cầu Khác hàng</a></li></li></ul>
                     <li><a href="#">Contact</a>
                     <ul class="menu-dropdown">
                       <li><a href="#">Hotline: 0948232811</a></li>
@@ -174,9 +175,9 @@
               </div>
             </div>
           </div>
-         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="position:relative; left:900px; bottom:180px;">Thêm</button>
-         <button class="btn btn-primary" style="position:relative; left:900px; bottom:180px;">Lưu</button>
-         <button class="btn btn-primary" style="position:relative; left:900px; bottom: 180px;">Refresh</button>
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="position:relative; left:900px; bottom:400px;">Thêm</button>
+         <button class="btn btn-primary" style="position:relative; left:900px; bottom:400px;">Lưu</button>
+         <button class="btn btn-primary" style="position:relative; left:900px; bottom: 400px;">Refresh</button>
       </div>
 </article>           
 </div>
