@@ -76,7 +76,7 @@
                       <ul class ="menu-dropdown">
                       <li><a href="./php/changepassword.php">Đổi mật khẩu</a></li>
                     <li><a href="./php/Feedback.php">Phản hồi</a></li>
-                    <li><a href="./php/Request.php">Yêu cầu Khác hàng</a></li></li></ul>
+                    <li><a href="./php/Request.php">Yêu cầu Khách hàng</a></li></li></ul>
                   
                    <li class="search-icon">
                       <input type="search" placeholder="Tìm kiếm...">

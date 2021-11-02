@@ -110,7 +110,7 @@
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="accessibility-outline"></ion-icon></span>Khách Hàng</a>
           <ul class ="menu-dropdown1">
             <li><a href="../php/Feedback.php">Phản hồi</a></li>
-            <li><a href="../php/Request.php">Yêu cầu Khác hàng</a></li></li></ul></li>
+            <li><a href="../php/Request.php">Yêu cầu Khách hàng</a></li></li></ul></li>
         <li><a href="#" class="feat-btn"><span class="iconn"><ion-icon name="call-outline"></ion-icon></span>Contact</a>
           <ul class="menu-dropdown1">
             <li><a href="#">Hotline: 0948232811</a></li>
@@ -129,8 +129,8 @@
       });
     </script>
 <div class="ThemTV">
+<button class="Change"><li><a class ="them" href="./function/add_store.php">Thêm</a></li></button>
   <button class="Change"><li><a class ="save" href="#">Lưu</a></li></button>
-    <button class="Change"><li><a class ="them" href="./function/add_store.php">Thêm</a></li></button>
     <button class="Change"><li><a class ="refresh" href="#">Refresh</a></li></button>
     </div>
 <table border=1 cellspacing=0 cellpading=0>  

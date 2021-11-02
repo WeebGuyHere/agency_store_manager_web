@@ -53,7 +53,7 @@
                       <ul class ="menu-dropdown">
                       <li><a href="./php/changepassword.php">Đổi mật khẩu</a></li>
                     <li><a href="./php/Feedback.php">Phản hồi</a></li>
-                    <li><a href="./php/Request.php">Yêu cầu Khác hàng</a></li></li></ul>
+                    <li><a href="./php/Request.php">Yêu cầu Khách hàng</a></li></li></ul>
                     <li><a href="#">Contact</a>
                     <ul class="menu-dropdown">
                       <li><a href="#">Hotline: 0948232811</a></li>
@@ -129,9 +129,9 @@
       });
     </script>
 <div class="ThemTV">
+  <button class="Change"><li><a class ="them" href="./function/add_store.php">Thêm</a></li></button> 
   <button class="Change"><li><a class ="save" href="#">Lưu</a></li></button>
-    <button class="Change"><li><a class ="them" href="./function/add_store.php">Thêm</a></li></button>
-    <button class="Change"><li><a class ="refresh" href="#">Refresh</a></li></button>
+  <button class="Change"><li><a class ="refresh" href="#">Refresh</a></li></button>
     </div>
        
 <table border=1 cellspacing=0 cellpading=0>  

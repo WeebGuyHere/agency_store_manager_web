@@ -52,7 +52,7 @@
                     <li><a href="#">Khách hàng</a>
                       <ul class ="menu-dropdown">
                     <li><a href="../php/Feedback.php">Phản hồi</a></li>
-                    <li><a href="../php/Request.php">Yêu cầu Khác hàng</a></li></li></ul>
+                    <li><a href="../php/Request.php">Yêu cầu Khách hàng</a></li></li></ul>
                     <li><a href="#">Contact</a>
                     <ul class="menu-dropdown">
                       <li><a href="#">Hotline: 0948232811</a></li>
