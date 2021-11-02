@@ -3,7 +3,7 @@
   if (isset($_SESSION['username']) && ($_SESSION['security_code']) )
   {
     require_once('../lib/connection.php');
-    $query = "SELECT * FROM cacdaily";
+    $query = "SELECT * FROM mathang";
     $result = mysqli_query($conn,$query);
   
 ?>
@@ -123,10 +123,30 @@
     });
   </script>
 <table border=1 cellspacing=0 cellpading=0>  
-  <tr> <td>Put table here</td></tr>   
-  <tr> <td>Put table here</td></tr> 
-  <tr> <td>Put table here</td> </tr>  
-  </table>  
+<tr><th colspan="4">QUẢN LÝ MẶT HÀNG</th></tr>
+<t>
+  <th>Mã Mặt Hàng</th>
+  <th>Tên Mặt Hàng</th>
+  <th>Đơn Giá</th>
+  <th>Thay đổi</th>
+
+  </t>
+  <?php 
+          while($rows=mysqli_fetch_array($result))
+          {
+        ?>
+        <tr>
+          <td><?php echo $rows['MaMatHang']; ?></td>
+          <td><?php echo $rows['TenMatHang']; ?></td>
+          <td><?php echo $rows['DonGia']; ?></td>
+         
+          <td><a class ="button_change" href="./function/edit_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Sửa</a>
+          <a class ="button_change" href="./function/del_store.php?id=<?php echo $rows['MaDaiLy']; ?>">Xoá</a></td>
+        </tr>
+        <?php
+          }
+        ?>
+  </table>    
   <div class="container">
     <div class="row">
       <article class="col-sm-9">
