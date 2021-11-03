@@ -296,7 +296,7 @@
                   </div>
                   <div class="form-group">
                     <select class="form-control" name="type" required>
-                    <option value="">Chọn mã đại lý</option>
+                    <option value="">Chọn loại đại lý</option>
                     <?php 
                         while($data=mysqli_fetch_array($list))
                         {
