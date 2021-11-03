@@ -326,7 +326,9 @@
                     <select class="form-control" name="idgoods" required>
                     <option value="">Chọn mã mặt hàng</option>
                     <?php 
-                        while($data=mysqli_fetch_array($list))
+                        $list0_goods = "SELECT * FROM mathang";
+                        $list0 = mysqli_query($conn,$list_goods);
+                        while($data=mysqli_fetch_array($list0))
                         {
                     ?>
                         <option value="<?php echo $data['MaMatHang']; ?>"><?php echo $data['MaMatHang']; ?></option>
