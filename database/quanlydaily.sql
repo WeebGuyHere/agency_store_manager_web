@@ -32,7 +32,7 @@ USE `quanlydaily`;
 DROP TABLE IF EXISTS `cacdaily`;
 CREATE TABLE IF NOT EXISTS `cacdaily` (
   `MaDaiLy` varchar(50) NOT NULL,
-  `TenDaiLy` varchar(50) NOT NULL,
+  `TenDaiLy` varchar(50) NOT NULL, 
   `Loai` varchar(50) NOT NULL,
   `DiaChi` varchar(50) NOT NULL,
   `Quan` varchar(50) NOT NULL,
