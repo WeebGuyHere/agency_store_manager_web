@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2021 at 11:51 AM
+-- Generation Time: Nov 03, 2021 at 12:40 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
-SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -31,7 +30,7 @@ USE `quanlydaily`;
 --
 
 DROP TABLE IF EXISTS `cacdaily`;
-CREATE TABLE `cacdaily` (
+CREATE TABLE IF NOT EXISTS `cacdaily` (
   `MaDaiLy` varchar(50) NOT NULL,
   `TenDaiLy` varchar(50) NOT NULL,
   `Loai` varchar(50) NOT NULL,
@@ -40,7 +39,9 @@ CREATE TABLE `cacdaily` (
   `DienThoai` varchar(50) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `NgayTiepNhan` date NOT NULL,
-  `TienNo` varchar(50) NOT NULL
+  `TienNo` varchar(50) NOT NULL,
+  PRIMARY KEY (`MaDaiLy`),
+  KEY `Loai` (`Loai`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -78,12 +79,14 @@ INSERT INTO `cacdaily` (`MaDaiLy`, `TenDaiLy`, `Loai`, `DiaChi`, `Quan`, `DienTh
 --
 
 DROP TABLE IF EXISTS `chitietxuathang`;
-CREATE TABLE `chitietxuathang` (
+CREATE TABLE IF NOT EXISTS `chitietxuathang` (
   `MaPhieuXuat` varchar(50) NOT NULL,
   `MaMatHang` varchar(50) NOT NULL,
   `SoLuong` varchar(50) NOT NULL,
   `DonGia` varchar(100) NOT NULL,
-  `ThanhTien` varchar(100) NOT NULL
+  `ThanhTien` varchar(100) NOT NULL,
+  PRIMARY KEY (`MaPhieuXuat`,`MaMatHang`),
+  KEY `MaMatHang` (`MaMatHang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -104,12 +107,13 @@ INSERT INTO `chitietxuathang` (`MaPhieuXuat`, `MaMatHang`, `SoLuong`, `DonGia`, 
 --
 
 DROP TABLE IF EXISTS `congno`;
-CREATE TABLE `congno` (
+CREATE TABLE IF NOT EXISTS `congno` (
   `MaDaiLy` varchar(50) NOT NULL,
   `Thang` varchar(50) NOT NULL,
   `NoDau` varchar(50) NOT NULL,
   `PhatSinh` varchar(50) NOT NULL,
-  `NoCuoi` varchar(50) NOT NULL
+  `NoCuoi` varchar(50) NOT NULL,
+  PRIMARY KEY (`MaDaiLy`,`Thang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -127,11 +131,12 @@ INSERT INTO `congno` (`MaDaiLy`, `Thang`, `NoDau`, `PhatSinh`, `NoCuoi`) VALUES
 --
 
 DROP TABLE IF EXISTS `doanhso`;
-CREATE TABLE `doanhso` (
+CREATE TABLE IF NOT EXISTS `doanhso` (
   `MaDaiLy` varchar(50) NOT NULL,
   `Thang` varchar(50) NOT NULL,
   `SoPhieuXuat` varchar(50) NOT NULL,
-  `TongTriGia` varchar(50) NOT NULL
+  `TongTriGia` varchar(50) NOT NULL,
+  PRIMARY KEY (`MaDaiLy`,`Thang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -148,10 +153,11 @@ INSERT INTO `doanhso` (`MaDaiLy`, `Thang`, `SoPhieuXuat`, `TongTriGia`) VALUES
 --
 
 DROP TABLE IF EXISTS `loaidaily`;
-CREATE TABLE `loaidaily` (
+CREATE TABLE IF NOT EXISTS `loaidaily` (
   `Loai` varchar(50) NOT NULL,
   `TenLoai` varchar(50) NOT NULL,
-  `NoToiDa` varchar(50) NOT NULL
+  `NoToiDa` varchar(50) NOT NULL,
+  PRIMARY KEY (`Loai`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -170,12 +176,13 @@ INSERT INTO `loaidaily` (`Loai`, `TenLoai`, `NoToiDa`) VALUES
 --
 
 DROP TABLE IF EXISTS `login`;
-CREATE TABLE `login` (
-  `ID` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `login` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(256) NOT NULL,
   `password` varchar(256) NOT NULL,
-  `level` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `level` varchar(25) NOT NULL,
+  PRIMARY KEY (`ID`,`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `login`
@@ -194,10 +201,11 @@ INSERT INTO `login` (`ID`, `username`, `password`, `level`) VALUES
 --
 
 DROP TABLE IF EXISTS `mathang`;
-CREATE TABLE `mathang` (
+CREATE TABLE IF NOT EXISTS `mathang` (
   `MaMatHang` varchar(50) NOT NULL,
   `TenMatHang` varchar(50) NOT NULL,
-  `DonGia` varchar(50) NOT NULL
+  `DonGia` varchar(50) NOT NULL,
+  PRIMARY KEY (`MaMatHang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -218,14 +226,16 @@ INSERT INTO `mathang` (`MaMatHang`, `TenMatHang`, `DonGia`) VALUES
 --
 
 DROP TABLE IF EXISTS `phieuthutien`;
-CREATE TABLE `phieuthutien` (
+CREATE TABLE IF NOT EXISTS `phieuthutien` (
   `MaPhieuThu` varchar(50) NOT NULL,
   `MaDaiLy` varchar(50) NOT NULL,
   `DienThoai` varchar(50) DEFAULT NULL,
   `DiaChi` varchar(50) DEFAULT NULL,
   `Email` varchar(50) DEFAULT NULL,
   `NgayThuTien` date DEFAULT NULL,
-  `SoTienThu` decimal(18,0) DEFAULT NULL
+  `SoTienThu` decimal(18,0) DEFAULT NULL,
+  PRIMARY KEY (`MaPhieuThu`,`MaDaiLy`),
+  KEY `MaDaiLy` (`MaDaiLy`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -244,11 +254,13 @@ INSERT INTO `phieuthutien` (`MaPhieuThu`, `MaDaiLy`, `DienThoai`, `DiaChi`, `Ema
 --
 
 DROP TABLE IF EXISTS `phieuxuathang`;
-CREATE TABLE `phieuxuathang` (
+CREATE TABLE IF NOT EXISTS `phieuxuathang` (
   `MaPhieuXuat` varchar(50) NOT NULL,
   `MaDaiLy` varchar(50) NOT NULL,
   `TongTien` decimal(18,0) DEFAULT NULL,
-  `NgayLapPhieu` date NOT NULL
+  `NgayLapPhieu` date NOT NULL,
+  PRIMARY KEY (`MaPhieuXuat`,`MaDaiLy`),
+  KEY `MaDaiLy` (`MaDaiLy`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -265,7 +277,7 @@ INSERT INTO `phieuxuathang` (`MaPhieuXuat`, `MaDaiLy`, `TongTien`, `NgayLapPhieu
 --
 
 DROP TABLE IF EXISTS `tochucdaily`;
-CREATE TABLE `tochucdaily` (
+CREATE TABLE IF NOT EXISTS `tochucdaily` (
   `SoLoaiDaiLy` varchar(50) NOT NULL,
   `SoDaiLyToiDa` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -276,78 +288,6 @@ CREATE TABLE `tochucdaily` (
 
 INSERT INTO `tochucdaily` (`SoLoaiDaiLy`, `SoDaiLyToiDa`) VALUES
 ('7', '8');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `cacdaily`
---
-ALTER TABLE `cacdaily`
-  ADD PRIMARY KEY (`MaDaiLy`),
-  ADD KEY `Loai` (`Loai`);
-
---
--- Indexes for table `chitietxuathang`
---
-ALTER TABLE `chitietxuathang`
-  ADD PRIMARY KEY (`MaPhieuXuat`,`MaMatHang`),
-  ADD KEY `MaMatHang` (`MaMatHang`);
-
---
--- Indexes for table `congno`
---
-ALTER TABLE `congno`
-  ADD PRIMARY KEY (`MaDaiLy`,`Thang`);
-
---
--- Indexes for table `doanhso`
---
-ALTER TABLE `doanhso`
-  ADD PRIMARY KEY (`MaDaiLy`,`Thang`);
-
---
--- Indexes for table `loaidaily`
---
-ALTER TABLE `loaidaily`
-  ADD PRIMARY KEY (`Loai`);
-
---
--- Indexes for table `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`ID`,`username`);
-
---
--- Indexes for table `mathang`
---
-ALTER TABLE `mathang`
-  ADD PRIMARY KEY (`MaMatHang`);
-
---
--- Indexes for table `phieuthutien`
---
-ALTER TABLE `phieuthutien`
-  ADD PRIMARY KEY (`MaPhieuThu`,`MaDaiLy`),
-  ADD KEY `MaDaiLy` (`MaDaiLy`);
-
---
--- Indexes for table `phieuxuathang`
---
-ALTER TABLE `phieuxuathang`
-  ADD PRIMARY KEY (`MaPhieuXuat`),
-  ADD KEY `MaDaiLy` (`MaDaiLy`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `login`
---
-ALTER TABLE `login`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -389,7 +329,6 @@ ALTER TABLE `phieuthutien`
 ALTER TABLE `phieuxuathang`
   ADD CONSTRAINT `phieuxuathang_ibfk_1` FOREIGN KEY (`MaPhieuXuat`) REFERENCES `chitietxuathang` (`MaPhieuXuat`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `phieuxuathang_ibfk_2` FOREIGN KEY (`MaDaiLy`) REFERENCES `cacdaily` (`MaDaiLy`) ON DELETE CASCADE ON UPDATE CASCADE;
-SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
