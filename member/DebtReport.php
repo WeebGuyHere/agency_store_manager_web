@@ -295,7 +295,7 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <input type="text" name="incurred" class="form-control" placeholder="Nhập địa chỉ" required>
+                    <input type="text" name="incurred" class="form-control" placeholder="Nhập phí phát sinh" required>
                   </div>
                   <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
