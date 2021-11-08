@@ -8,6 +8,6 @@ CSS, Library, Template use
 4. Boostrap DatePicker
 5. jQuery
 6. DataTables javascript library
-7. ==================================================================
-8. Tomorrow, project will change owner to @sondo8920.
-9. I will no longer owner and maintain this project.
+==================================================================
+Tomorrow, project will change owner to @sondo8920.
+I will no longer owner and maintain this project.
