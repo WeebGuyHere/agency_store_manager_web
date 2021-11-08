@@ -188,7 +188,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                           <a href="./DeliveryNote.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Back</a>
-                          <a href="./DeliveryDetail.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Refresh</a>
+                          <a href="./DeliveryDetail.php?ID=<?php echo $id; ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Refresh</a>
                           <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#AddModal">Add</button>  
                           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#NoteModal">Chú ý</button>  
                         </div>
