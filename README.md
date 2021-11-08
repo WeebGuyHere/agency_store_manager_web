@@ -1,6 +1,8 @@
 # agency_store_manager_web
 Yes today project complete all back-end. Thanks all member be patient.
-Tomorrow, project will change owner to @sondo8920. I will no longer owner and maintain this project.
+=======================================================================
+Tomorrow, project will change owner to @sondo8920. 
+I will no longer owner and maintain this project.
 =======================================================================
 CSS, Library, Template use
 1. Bootstrap
