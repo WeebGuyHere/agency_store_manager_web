@@ -17,7 +17,7 @@
             {
                 ?>
                     <script>
-                        if (!alert('This name of store-type already exists!')) {
+                        if (!alert('This account already exists!')) {
                             document.location = "../usermanger.php";
                         }
                     </script>
