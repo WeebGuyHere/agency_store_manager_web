@@ -180,7 +180,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Xem thông tin các đại lý</h5>
                                     <p class="card-text">Bạn chỉ có thể thêm tìm kiếm các bản ghi</p>
-                                    <a href="./php/AgencyStore.php" class="btn btn-light">Go</a>
+                                    <a href="./member/AgencyStore.php" class="btn btn-light">Go</a>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +190,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Thêm thông tin các mặt hàng</h5>
                                         <p class="card-text">Có thể thêm, chỉnh sửa, xoá các mặt hàng đang có</p>
-                                        <a href="./php/addgoods.php" class="btn btn-light">Go</a>
+                                        <a href="./member/addgoods.php" class="btn btn-light">Go</a>
                                     </div>
                                 </div>
                             </div>        
@@ -204,7 +204,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Báo cáo doanh số tháng</h5>
                                     <p class="card-text">Lấy báo cáo doanh số đại lý theo tháng.</p>
-                                    <a href="./php/SalesReport.php" class="btn btn-light">Go</a>
+                                    <a href="./member/SalesReport.php" class="btn btn-light">Go</a>
                                 </div>
                             </div>
                         </div>
@@ -214,7 +214,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Báo cáo công nợ tháng</h5>
                                         <p class="card-text">Lấy báo cáo nợ cuối đại lý theo tháng</p>
-                                        <a href="./php/DebtReport.php" class="btn btn-light">Go</a>
+                                        <a href="./member/DebtReport.php" class="btn btn-light">Go</a>
                                     </div>
                                 </div>
                             </div>        
@@ -228,7 +228,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Tạo phiếu xuất hàng</h5>
                                         <p class="card-text">Có thể thêm, chỉnh sửa, xoá các phiếu xuất hàng</p>
-                                        <a href="./php/DeliveryNote.php" class="btn btn-light">Go</a>
+                                        <a href="./member/DeliveryNote.php" class="btn btn-light">Go</a>
                                     </div>
                                 </div>
                             </div>        
@@ -238,7 +238,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Tạo phiếu thu tiền</h5>
                                     <p class="card-text">Có thể thêm, chỉnh sửa, xoá các phiếu thu tiền</p>
-                                    <a href="./php/Bill.php" class="btn btn-light">Go</a>
+                                    <a href="./member/Bill.php" class="btn btn-light">Go</a>
                                 </div>
                             </div>
                         </div>    
