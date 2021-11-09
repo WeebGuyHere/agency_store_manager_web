@@ -108,7 +108,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <!-- Nav Item - About US -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="#aboutus" data-toggle="modal">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span>Về chúng tôi</span></a>
             </li>
@@ -272,6 +272,40 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
+
+    <!--Modal about team-->
+    <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Về chúng tôi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-dark">
+               <h5 class="card-title text-dark">Trang web quản lý các đại lý</h5>
+               <h5 class="card-title text-dark">Các thành viên: </h5>
+               <p>1. Ngô Thành Long</p>
+               <p>2. Đỗ Bá Sơn</p>
+               <p>3. Trịnh Tiến Anh</p>
+               <p>4. Vũ Quốc Hưng</p>
+               <p>5. Nguyễn Ngọc Hoàng Hà</p>
+               <br>
+               <h5 class="card-title text-dark">Các khuôn mẫu CSS, template và thư viện sử dụng</h5>
+               <p>1. Khuôn mẫu CSS Bootstrap: <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+               <p>2. Bootstrap DatePicker: <a href="https://github.com/uxsolutions/bootstrap-datepicker">https://github.com/uxsolutions/bootstrap-datepicker</a></p>
+               <p>3. DataTables: <a href="https://datatables.net/">https://datatables.net/</a></p>
+               <p>4. Fontawesome phiên bản free</p>
+               <p>5. jQuery và jQuery-easing: <a href="https://jquery.com/">https://jquery.com/</a></p>
+               <p>6. Start Bootstrap Template: <a href="https://startbootstrap.com/">https://startbootstrap.com/</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
